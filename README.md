@@ -3,6 +3,7 @@ HackPrinceton
 
 CMU representing at HackPrinceton 2013!
 Who knows what we'll make :D
+Now with more Russians at CMU
 
 Team
 ----
