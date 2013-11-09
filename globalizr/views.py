@@ -1,3 +1,4 @@
+# Main page views
 from django.shortcuts import render_to_response
 
 # Homepage

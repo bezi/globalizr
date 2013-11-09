@@ -1,3 +1,4 @@
+# API views
 import json
 from query import parse_query
 from django.http import HttpResponse
