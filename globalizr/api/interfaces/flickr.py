@@ -1,4 +1,4 @@
-# Contains functions pertaining to the program's model
+# Flickr API querying 
 import urllib2
 import json
 import re
@@ -54,22 +54,34 @@ def geolocPath(photoId):
 
 def interestingMonth(year, month):
     locations = []
-    for day in xrange(31):
-        for photo_id in daily_interesting(1, year, month, day + 1):
+    for day in xrange(3):
+        print "day: {}".format(day)
+        i = 0
+        for photo_id in daily_interesting(500, year, month, day + 1):
+            print "{}".format(i)
+            i = i + 1
             loc_string = geolocPath(photo_id)
             if not (loc_string == "Error: not found"):
                 long = int(float(loc_string[0])*1000)/1000.0
                 lat = int(float(loc_string[1])*1000)/1000.0
-                locations.append((1,long,lat))
+                locations.append((5,long,lat))
     return locations
-f = open('locs.txt', 'w')
-locs = interestingMonth(2013,3)
-f.write("{")
-f.write('"status": 0, ')
-f.write('"data": [')
-f.write('"name": "Interesting flickr pic locations",')
-f.write('"data": [')
-for loc in locs:
-    f.write(str(loc[0]) + ", " + str(loc[1]) + ", " + str(loc[2]) + ", ")
-f.write("]]}")
-f.close()
+
+def parse_interface_flickr(metric):
+    if metric == "interesting":
+        locs = interestingMonth(2013,3)
+        data = {
+            "status": 0,
+            "data": {
+                "name": "Interesting flickr pictures by location.",
+                "data": []
+            }
+        }
+        for loc in locs:
+            data["data"]["data"].append(loc[0])
+            data["data"]["data"].append(loc[1])
+            data["data"]["data"].append(loc[2])
+    else:
+        data = { "status": 1 }
+
+    return data

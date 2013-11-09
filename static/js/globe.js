@@ -15,9 +15,9 @@ var DAT = DAT || {};
 
 DAT.Globe = function(container, colorFn) {
 
-  colorFn = colorFn || function(x) {
+  colorFn = function(x) {
     var c = new THREE.Color();
-    c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
+    c.setHSL( 0.5, 1.0, 0.5 );
     return c;
   };
 
@@ -174,10 +174,10 @@ DAT.Globe = function(container, colorFn) {
     console.log(opts.format);
     if (opts.format === 'magnitude') {
       step = 3;
-      colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
+      colorFnWrapper = function(data, i) { return colorFn(data[i]); }
     } else if (opts.format === 'legend') {
       step = 4;
-      colorFnWrapper = function(data, i) { return colorFn(data[i+3]); }
+      colorFnWrapper = function(data, i) { return colorFn(data[i]); }
     } else {
       throw('error: format not supported: '+opts.format);
     }
@@ -186,11 +186,11 @@ DAT.Globe = function(container, colorFn) {
       if (this._baseGeometry === undefined) {
         this._baseGeometry = new THREE.Geometry();
         for (i = 0; i < data.length; i += step) {
-          lat = data[i];
+
+          size = data[i];
           lng = data[i + 1];
-//        size = data[i + 2];
+          lat = data[i + 2];
           color = colorFnWrapper(data,i);
-          size = 0;
           addPoint(lat, lng, size, color, this._baseGeometry);
         }
       }
