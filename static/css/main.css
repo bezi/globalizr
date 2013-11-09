@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo|Open+Sans);
+body {
+    padding-top: 60px;
+    background-color: #222;
+}
+
+h1 {
+    color: #ccc;
+}
+
+footer {
+    padding-top: 15px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    color: #F5F5F5;
+    background-color: #333;
+}

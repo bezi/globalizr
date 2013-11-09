@@ -17,9 +17,9 @@
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
 
     <!-- Custom styles for this template -->
-    <!-- TODO: our .css files
-    <link href="starter-template.css" rel="stylesheet">
-    -->
+    <!-- TODO: our .css files-->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <!-- -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,17 +49,13 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
-    <div class="container">
-
-        <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
-
-    </div><!-- /.container -->
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+        <p class="text-center muted credit">Designed at <a href="http://hackprinceton.com/">HackPrinceton</a> by <a href="http://www.oscarbezi.com/">Oscar Bezi</a>, <a href="mailto:cepel.sinan@gmail.com">Sinan Cepel</a>, <a href="mailto:ajia@gmail.com">Andre Jia</a>, and <a href="http://www.jacobzimmerman.me">Jacob Zimmerman</a>, CS Freshman at <a href="http://www.cmu.edu/">Carnegie Mellon University</a>.<br />
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
