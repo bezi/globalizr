@@ -16,6 +16,12 @@ Team
 TODO: Hopefully updated hourly
 ==============================
 
+General:
+--------
+- favicon.ico
+- add analytics
+- accent colors for palette
+
 Oscar:
 ------
 - Make Django views nice
