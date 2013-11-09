@@ -17,10 +17,17 @@ Returns json of the form:
 Returns json of the form:
 ```
 {
+    "name": name, // human readable string describing dataset
     "status": 0|1, // 1 if there is an error
     "data": {
-        "name": name, //string
-        "data": [ mag1, long1, lat1, . . .] // format read by globe
+        label1: {
+            "name": name, //string
+            "data": [ mag1, long1, lat1, . . .] // format read by globe
+        },
+        label2: {
+            "name": name, //string
+            "data": [ mag1, long1, lat1, . . .] // format read by globe
+        }, . . . 
     }
 }
 ```
