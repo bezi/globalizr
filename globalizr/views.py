@@ -4,9 +4,6 @@ from django.shortcuts import render_to_response
 def about(request):
     return render_to_response('about.html', {'nav': "about"})
 
-def contact(request):
-    return render_to_response('contact.html', {'nav': "contact"})
-
 def query(request, query):
     print "New query: {}".format(query)
     data = {

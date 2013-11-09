@@ -8,6 +8,5 @@ urlpatterns = patterns('',
     url(r'^$', 'globalizr.views.home', name='home'),
     url(r'^home/$', 'globalizr.views.home', name='home'),
     url(r'^about/$', 'globalizr.views.about', name='about'),
-    url(r'^contact/$', 'globalizr.views.contact', name='contact'),
     url(r'^query/(*)/$', 'globalizr.views.query', name='query'),
 )
