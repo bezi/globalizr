@@ -11,6 +11,12 @@ canvas {
     background-color: #222;
 }
 
+#input-wrapper {
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
 #landing-header {
     padding: 20px;
     color: #fff;
@@ -42,6 +48,9 @@ canvas {
     margin-top: 15px;
     list-style-type: none;
     text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
 }
 
 li {
