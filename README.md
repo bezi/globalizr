@@ -20,11 +20,12 @@ General:
 --------
 - favicon.ico
 - add analytics
-- accent colors for palette
+- how do we get data about HQs?
+- What metrics should we graph?
 
 Oscar:
 ------
-- Make Django views nice
+- Fix globe error with world.jpg
 
 Jake:
 -----
@@ -32,11 +33,11 @@ Jake:
 
 Sinan:
 ------
-- Mongo stuff and importing SailThru data
+- Investigate non-finance data options
 
 Andre:
 ------
-- Getting up to speed with Django
+- Investigate finance data options
 
 Instructions for MongoDB
 ========================
