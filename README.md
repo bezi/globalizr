@@ -19,25 +19,25 @@ TODO: Hopefully updated hourly
 General:
 --------
 - favicon.ico
-- add analytics
-- how do we get data about HQs?
+- Add analytics
+- How do we get data about HQs?
 - What metrics should we graph?
 
 Oscar:
 ------
-- Fix globe error with world.jpg
+- Look at logistics of parsing finance data
 
 Jake:
 -----
-- Get frontend looking nice
+- Get frontend looking nice. Look into dark/slate theme?
 
 Sinan:
 ------
-- Investigate non-finance data options
+- Flickr data, sleep.
 
 Andre:
 ------
-- Investigate finance data options
+- Work with Andre to deal with logistics of parsing finance data
 
 Instructions for MongoDB
 ========================
