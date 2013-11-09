@@ -2,4 +2,7 @@ venv/
 staticfiles/
 *.pyc
 *.swp
-
+globalizr/.Python
+globalizr/bin/
+globalizr/include/
+globalizr/lib/
