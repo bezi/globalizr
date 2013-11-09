@@ -9,3 +9,5 @@ def home(request):
 def about(request):
     return render_to_response('about.html', {'nav': "about"})
 
+def world(request):
+    return render_to_response('world.html')
