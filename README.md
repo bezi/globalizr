@@ -18,7 +18,7 @@ TODO: Hopefully updated hourly
 
 Oscar:
 ------
-- Get HTML5Boilerplate with Bootstrap uploaded, work on Javascript for frontend
+- Make Django views nice
 
 Jake:
 -----
