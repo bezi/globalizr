@@ -21,7 +21,15 @@ def interestingMonth(y, m):
     c = []
     for x in xrange(31):
         c.append(interesting500(y,m,x+1))
-     return c
+    return c
+
+def geolocPath(photoId):
+    path = "http://api.flickr.com/services/rest/?"
+    path = path + "&method=" + "flickr.photo.geo.getLocation"
+    path = path + "&api_key=" + "48dd4e5f2274fe3d6d0793f6e0d92dcc"
+    path = path + "&photo_id=" + photoId
+    return path
+    
 #def getGeo(y, m):
 #    urls = interestingMonth(y, m)
 #    for flickrUrl in urls:
