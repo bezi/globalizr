@@ -30,31 +30,12 @@
     {% endblock %}
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/home/">globalizr</a>
-            </div><!-- navbar-header -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li {% if nav == "home" %}class="active"{% endif %}><a href="/home/">Home</a></li>
-                    <li {% if nav == "about" %}class="active"{% endif %}><a href="/about/">About</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
 
     {% block content %}
     {% endblock %}
 
     <footer>
-        <p class="text-center muted credit">Designed at <a href="http://hackprinceton.com/">HackPrinceton</a> by <a href="http://www.oscarbezi.com/">Oscar Bezi</a>, <a href="mailto:cepel.sinan@gmail.com">Sinan Cepel</a>, <a href="mailto:ajia@gmail.com">Andre Jia</a>, and <a href="http://www.jacobzimmerman.me">Jacob Zimmerman</a>, CS Freshman at <a href="http://www.cmu.edu/">Carnegie Mellon University</a>.<br />
+        <p class="text-center muted credit">Designed at <a href="http://hackprinceton.com/">HackPrinceton</a> by <a href="http://www.oscarbezi.com/">Oscar Bezi</a>, <a href="mailto:cepel.sinan@gmail.com">Sinan Cepel</a>, <a href="mailto:ajia@gmail.com">Andre Jia</a>, and <a href="http://www.jacobzimmerman.me">Jacob Zimmerman</a>, CS freshman at <a href="http://www.cmu.edu/">Carnegie Mellon University</a>.<br />
     </footer>
 
     <!-- Bootstrap core JavaScript
@@ -62,6 +43,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>
 

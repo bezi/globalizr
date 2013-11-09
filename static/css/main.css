@@ -1,11 +1,68 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo|Open+Sans);
 body {
-    padding-top: 60px;
-    background-color: #1c7291;
+    background: url(/static/imgs/earth-from-space-desat.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    padding-bottom: 55px;
 }
 
-h1 {
+canvas {
+    background-color: #222;
+}
+
+#landing-header {
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 110px;
+}
+
+#landing-search {
+    background-color: rgba(0,0,0,0);
+    height: 150px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     color: #ccc;
+    font-size: 80px;
+    text-align: center;
+}
+
+#landing-search:focus {
+    outline: none;
+}
+
+.about-list {
+    margin-top: 15px;
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    padding: 0px 30px;
+}
+
+.my-btn {
+    margin: 10px;
+    height: 80px;
+    width:  200px;
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.my-btn:hover {
+    color: #ccc;
+    background: rgba(0,0,0,0);
+    border: 1px solid #ccc;
 }
 
 footer {
