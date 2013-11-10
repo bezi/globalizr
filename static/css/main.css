@@ -193,7 +193,7 @@ a:hover {
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
-    top: 20%;
+    top: 16%;
     left: -33%;
     z-index: 1;
     -webkit-transition: left 1s;
