@@ -92,11 +92,6 @@ a:hover {
     /* border: 2px solid #333; */
 }
 
-/* This is hacky! This has to come sometime _after_ .btn {} */
-/* #input-wrapper .about-list .btn {
-    border: none;
-} */
-
 .btn:hover {
     color: #ccc;
     background: rgba(0,0,0,0);
@@ -146,22 +141,45 @@ a:hover {
     list-style-type: none;
 }
 
+.globe-screen {
+    display: none;
+}
+
 .globe-screen h1 {
-    display: block;
-    opacity: 1;
+    margin-left: 20px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-.globe-screen form {
-    display: block;
-    opacity: 1;
+.globe-screen form input {
+    background-color: rgba(0,0,0,0);
+    height: 50px;
+    width: 33%;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #ccc;
+    font-size: 26px;
+    text-align: center;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
+}
+
+.globe-screen form input:focus {
+    outline: none
+}
+
+.globe-screen a h1 {
+    color: #fff;
+}
+
+.globe-screen a h1:hover {
+    color: #0082B5;
 }
 
 footer {
