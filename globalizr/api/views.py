@@ -6,7 +6,7 @@ from interfaces.flickr import parse_interface_flickr
 from django.http import HttpResponse
 
 INTERFACE_DIR = os.path.abspath(os.path.dirname(__file__)) + '/interfaces/json/'
-INTERFACES = ["flickr", "weather"];
+INTERFACES = ["flickr", "weather", "universities"];
 def interface(request, inter, disc="default"):
     print "SHIT GOT CALLED {}".format(inter)
     if inter.lower() in INTERFACES:
