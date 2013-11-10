@@ -15,6 +15,10 @@ a:hover {
     text-decoration: none;
 }
 
+.branding {
+    font-family: "Arvo", serif;
+}
+
 #input-wrapper {
     opacity: 0;
     -webkit-transition: opacity 2s;
@@ -70,9 +74,6 @@ a:hover {
     margin-right: auto;
     list-style-type: none;
     text-align: center;
-    opacity: 0;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
 }
 
 .about-list > li {
@@ -88,7 +89,13 @@ a:hover {
     color: #333;
     text-align: center;
     border-radius: 8px;
+    /* border: 2px solid #333; */
 }
+
+/* This is hacky! This has to come sometime _after_ .btn {} */
+/* #input-wrapper .about-list .btn {
+    border: none;
+} */
 
 .btn:hover {
     color: #ccc;
@@ -110,8 +117,17 @@ a:hover {
     left: 11%;
     z-index: -1;
     opacity: 0;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.info-div .btn {
+    border: 2px solid #333;
+}
+
+.info-div .btn:hover {
+    color: #ccc;
+    background: #333;
 }
 
 .info-div a {
@@ -119,7 +135,7 @@ a:hover {
 }
 
 .info-div a:hover {
-    color: #d8d8d;
+    color: #d8d8d8;
 }
 
 #devs-row {
@@ -128,16 +144,6 @@ a:hover {
 
 .no-bullet > li {
     list-style-type: none;
-}
-
-footer {
-    padding-top: 12px;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    height: 40px;
-    color: #F5F5F5;
-    background-color: #333;
 }
 
 .globe-screen h1 {
@@ -156,4 +162,14 @@ footer {
     top: 0;
     right: 0;
     z-index: 1;
+}
+
+footer {
+    padding-top: 12px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    color: #F5F5F5;
+    background-color: #333;
 }
