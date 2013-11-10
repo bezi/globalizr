@@ -13,5 +13,6 @@
              "humidity": "Relative humitidy",
              "pressure": "Atmospheric pressure (in. Hg)",
              "high": "High daily temperature (F)",
-             "low":  "Low daily temperature (F"}
+             "low":  "Low daily temperature (F"
+}
 }

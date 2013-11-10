@@ -23,7 +23,7 @@ def getLatLong(name):
     return "Fail"
 #simulates arctan
 def curve(x, cap):
-    return (math.tanh((cap-x)/(cap/4.0))+1)*40
+    return (math.tanh((cap-x)/(cap/4.0))*20) +30
 
 def getData(infile, cap):
     line = infile.readline()

@@ -167,10 +167,10 @@
                             $("li").remove(".added");
                             for ( var x = 0; x < response.keys.length; x++) {
                                 if (response.keys[x] == disc) {
-                                    $("#toolbar-list").append('<li class="active added"><a href="#">' + response.metadata[disc] + '</a></li>');
+                                    $("#toolbar-list").append('<li class="active added"><a href="#">' + response.keys[x] + '</a></li>');
                                 } else {
                                     strings = interf + ' ' + response.keys[x];
-                                    $("#toolbar-list").append('<li id="' + strings + '" class="added"><a href="#" >' + response.metadata[response.keys[x]] + '</a></li>');
+                                    $("#toolbar-list").append('<li id="' + strings + '" class="added"><a href="#" >' + response.keys[x] + '</a></li>');
                                     $("#" + strings).on("click", function() { submitQuery(strings);});
                                 }
                             }
@@ -189,10 +189,10 @@
     <div id="toolbar-collapse-btn">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
-    <h1 id="toolbar-interface">Heading</h1>
+    <h1 id="toolbar-interface">Weather</h1>
     <div class="sidebar-nav">
         <ul id="toolbar-list" class="nav nav-list">
-            <li class="nav-header"><h2>Options</h2></li>
+            <li class="nav-header"><h2>Try adding. . .</h2></li>
         </ul>
     </div>
     <br />
