@@ -51,10 +51,10 @@
             <h1>How do I use globalizr?</h1>
             <p class="lead">To use <span class="branding">globalizr</span>, you have to construct a <em>query</em> in the format <em>&lt;interface&gt;&lt;metric&gt;</em>. What this means is that you specify what type of data to retrieve and what metric to display about that data. Check out some of the awesome starter queries we have below!</p>
             <ul class="no-bullet">
-                <li class="lead"><a href="#">weather high</a></li>
-                <li class="lead"><a href="#">weather capitals</a></li>
-                <li class="lead"><a href="#">flickr october2013</a></li>
-                <li class="lead"><a href="#">university</a></li>
+                <li class="lead"><a href="#" id="how1">weather high</a></li>
+                <li class="lead"><a href="#" id="how2">weather pressure</a></li>
+                <li class="lead"><a href="#" id="how3">flickr october2013</a></li>
+                <li class="lead"><a href="#" id="how4">university</a></li>
             </ul>
             <p class="lead">To use the raw data that's at the heart of the above queries, check us out on <a href="https://github.com/obezi/HackPrinceton">GitHub</a> to find documentation for how to structure your API data requests over HTTP.</p>
         </div>
@@ -246,6 +246,53 @@
         e.preventDefault();
         submitQuery($("#globe-search").val());
     });
+
+    // Hard coded hack
+    $("#how1").on("click", function(e) {
+        e.preventDefault();
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+        hideGUI();
+        if (submitQuery("weather high")){
+            hideGUI();
+            $(".globe-screen").css("display", "block");
+        } else {
+            $("#landing-search").innerHTML = '';
+        }
+    });
+    $("#how2").on("click", function(e) {
+        e.preventDefault();
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+        hideGUI();
+        if (submitQuery("weather pressure")){
+            hideGUI();
+            $(".globe-screen").css("display", "block");
+        } else {
+            $("#landing-search").innerHTML = '';
+        }
+    });
+    $("#how3").on("click", function(e) {
+        e.preventDefault();
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+        hideGUI();
+        if (submitQuery("flickr")){
+            hideGUI();
+            $(".globe-screen").css("display", "block");
+        } else {
+            $("#landing-search").innerHTML = '';
+        }
+    });
+    $("#how4").on("click", function(e) {
+        e.preventDefault();
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+        hideGUI();
+        if (submitQuery("university")){
+            hideGUI();
+            $(".globe-screen").css("display", "block");
+        } else {
+            $("#landing-search").innerHTML = '';
+        }
+    });
+
     $(".what-btn").on("click", function() {
         $("#input-wrapper").css("opacity", 0);
         $("#how-info").css("z-index", -1).css("opacity", 0);
