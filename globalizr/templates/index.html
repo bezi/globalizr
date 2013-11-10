@@ -57,11 +57,7 @@
                 var data = JSON.parse(xhr.responseText);
                 window.data = data;
                 if (data.status == 0) {
-                    for (x = 0; x < data.keys.length; ++x) {
-                        globe.addData(data.data[data.keys[x]].pos_data.data, {format: 'magnitude', name: data.data[data.keys[x]].pos_data.name, animated: true});
-                    console.log(data.data[data.keys[x]].pos_data.data);
-                    console.log(data.data[data.keys[x]].pos_data.name);
-                    }
+                        globe.addData(data.data[data.keys[0]].pos_data.data, {format: 'magnitude', name: data.data[data.keys[0]].pos_data.name, animated: true});
                 }
                 globe.createPoints();
                 globe.animate();

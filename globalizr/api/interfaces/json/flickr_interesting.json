@@ -1,6 +1,6 @@
 { "name": "Popular pictures in Flickr by location",
 "status": 0,
-"keys": ["month0", "month1", "month2", "month3", "month4", "month5"],
+"keys": ["month0", "month1", "month2", "month3", "month4", "month5"], 
 "data": {
 "month0": {
     "name": "Popular Flickr pictures for June 2013",
