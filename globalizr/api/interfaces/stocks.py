@@ -43,13 +43,15 @@ datatables.org%2Falltableswithkeys&q="
         parsed = toJson(stockStats_base, stock)
     except urllib2.HTTPError:
         return 0;
-    #if parsed["query"]["results"]["quote"]
     return parsed["query"]["results"]["quote"][metric]
 
 def genLoc(code):
     city = subprocess.check_output(["./getaddr.sh", code])
     google_geocode_base = "http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address="
-    parsed = toJson(google_geocode_base, city);
+    try:
+        parsed = toJson(google_geocode_base, city);
+    except urllib2.HTTPError:
+        parsed = {"status":"ZERO_RESULTS"}
     if not (parsed["status"] == "ZERO_RESULTS"):
         return (parsed["results"][0]["geometry"]["location"]["lat"], 
                 parsed["results"][0]["geometry"]["location"]["lng"])
@@ -80,9 +82,28 @@ def parse_interface_stocks(metric):
 
     return data
 
+def parse_locs_stocks(f): 
+    codes = genAllCodes();
+    for code in codes:
+        print code
+        loc = genLoc(code)
+        if loc != None:
+            f.write(code + ":" + loc + ",")
+    return data
+
 def generate():
     f = open(os.path.join(JSON_DIRNAME, "stocks_LastTradePriceOnly.txt"),"w+")
     f.write(parse_interface_stocks("LastTradePriceOnly"))
     f.close()
 
-generate()
+def generate_locs():
+    f = open(os.path.join(JSON_DIRNAME, "stocks_locations"),"w+")
+    f.write("{\"name\":\"stock_Locations\", ")
+    f.write("\"status\":0, ")
+    f.write("\"data\":{")
+    parse_locs_stocks(f)
+    f.write("},")
+    f.write("}")
+    f.close()
+
+generate_locs()
