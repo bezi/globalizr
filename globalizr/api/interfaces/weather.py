@@ -62,7 +62,7 @@ def scrape(woeid):
 
 def generate():
     infile = open(os.path.join(JSON_DIRNAME, 'capitals.json'), 'r')
-    outfile = open(os.path.join(JSON_DIRNAME, 'weather.json'), 'w+')
+    outfile = open(os.path.join(JSON_DIRNAME, 'weather4000.json'), 'w+')
     line = infile.readline()
     idx = 0
     data = {'windchill':[],
@@ -71,8 +71,11 @@ def generate():
             'pressure':[],
             'high':[],
             'low':[]}
-    while (line != "" and idx < 2000):
-        if (idx % 50 == 0): print idx
+    while (idx < 3250):
+        idx = idx + 1
+        infile.readline()
+    while (line != ""):
+        print idx
         idx = idx + 1
         scraped = scrape(getWoeid(line.rstrip()))
         lat = str(scraped['lat'])
