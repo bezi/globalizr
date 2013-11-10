@@ -5,12 +5,18 @@
 
 {% block content %}
 <div class="container">
+    <div class="globe-screen">
+        <a href="/"><h1>globalizr</h1></a>
+        <form id="globe-form" autocomplete="off">
+            <input type="search" id="globe-search" placeholder="globalize it." onfocus="this.placeholder = ''"/>
+        </form>
+    </div>
     <div id="input-wrapper">
         <h1 id="landing-header">globalizr</h1>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <form id="landing-form" autocomplete="off">
-                <input type="search" id="landing-search" placeholder="globalize it." onfocus="this.placeholder = ''"/>
+                    <input type="search" id="landing-search" placeholder="globalize it." onfocus="this.placeholder = ''"/>
                 </form>
             </div>
         </div>
@@ -114,8 +120,7 @@
 <script type="text/javascript" src="{% static 'js/Tween.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/globe.js' %}"></script>
 <script type="text/javascript">
-function submitQuery() {
-    query = $("#landing-search").val();
+function submitQuery(query) {
     if(!Detector.webgl){
         Detector.addGetWebGLMessage();
     } else {
@@ -170,12 +175,15 @@ function submitQuery() {
         $("#landing-form").on("submit", function (e) {
             e.preventDefault();
             hideGUI();
-            submitQuery();
-            $("#landing-header").addClass('globe-screen');
-            $("#landing-form").addClass('globe-screen');
+            submitQuery($("#landing-search").val());
+            $(".globe-screen").css("display", "block");
         });
         setTimeout(function() {$("#input-wrapper").css("-webkit-transition", "display 1s")}, 2000);
         setTimeout(function() {$("#input-wrapper").css("transition", "display 1s")}, 2000);
+    });
+    $("#globe-form").on("submit", function(e) {
+        e.preventDefault();
+        submitQuery($("#globe-search").val());
     });
     $(".what-btn").on("click", function() {
         $("#input-wrapper").css("opacity", 0);
@@ -207,12 +215,5 @@ function submitQuery() {
         $("#about-info").css("z-index", -1).css("opacity", 0);
         $("#input-wrapper").css("opacity", 1);
     });
-    /* $("#landing-header").on("click", function() {
-        // Home
-        $("#landing-header").removeClass('globe-screen');
-        $("#landing-form").removeClass('globe-screen');
-        $("#input-wrapper").css("opacity", 1);
-        $(".about-list").css("opacity", 1);
-    }); */
 </script>
 {% endblock %}
