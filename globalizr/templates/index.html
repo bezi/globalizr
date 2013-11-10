@@ -33,8 +33,8 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <h1>What is globalizr?</h1>
-            <p class="lead"><span class="branding">globalizr</span> is a next generation data visualization tool. Centered around the idea that information should be both useful and beautiful, both easy-to-use and powerful, <span class="branding">globalizr</span> takes database queries and plots them on a global scale. First, we take geographic demographic data from many different data stores and accumulate it. Then, once the user (you!) makes a query, it retrieves the needed data and renders a three-dimensional, interactive globe depicting the query. Give it a shot! Head over to the &ldquo;About&rdquo; page to check out some sample queries!</p>
-            <p class="lead">All of this is fully pluggable as well. We offer an API so that any user can retrieve our aggregated geometric data. The data is transmitted in JSON format, consisting of mainly longitude-latitude pairs and their corresponding magnitudes. If you use this data, <a href="mailto:admin@organizr.org">let us know</a>! We love hearing all the cool things that people are doing.</p>
+            <p class="lead"><span class="branding">globalizr</span> is a next generation data visualization tool and API. Centered around the idea that information should be both useful and beautiful, both easy-to-use and powerful, <span class="branding">globalizr</span> takes database queries and plots them on a global scale. First, we take geographic demographic data from many different data stores and accumulate it. Then, once the user (you!) makes a query, it retrieves the needed data and renders a three-dimensional, interactive globe depicting the query. Give it a shot! Head over to the &ldquo;About&rdquo; page to check out some sample queries!</p>
+            <p class="lead">All of this is fully pluggable as well. We offer an API so that any user can retrieve our aggregated geographic data over HTTP. The data is transmitted in JSON format, consisting of mainly longitude-latitude pairs and their corresponding magnitudes, along with some descriptive metadata. If you use this data, <a href="mailto:admin@organizr.org">let us know</a>! We love hearing all the cool things that people are doing.</p>
         </div>
     </div>
     <div class="row">
@@ -51,11 +51,12 @@
             <h1>How do I use globalizr?</h1>
             <p class="lead">To use <span class="branding">globalizr</span>, you have to construct a <em>query</em> in the format <em>&lt;interface&gt;&lt;metric&gt;</em>. What this means is that you specify what type of data to retrieve and what metric to display about that data. Check out some of the awesome starter queries we have below!</p>
             <ul class="no-bullet">
-                <li class="lead"><a href="#">flickr interesting</a></li>
-                <li class="lead"><a href="#">finance tickers</a></li>
-                <li class="lead"><a href="#">finance percent-change</a></li>
+                <li class="lead"><a href="#">weather high</a></li>
                 <li class="lead"><a href="#">weather capitals</a></li>
+                <li class="lead"><a href="#">flickr october2013</a></li>
+                <li class="lead"><a href="#">universities</a></li>
             </ul>
+            <p class="lead">To use the raw data that's at the heart of the above queries, check us out on <a href="https://github.com/obezi/HackPrinceton">GitHub</a> to find documentation for how to structure your API data requests over HTTP.</p>
         </div>
     </div>
     <div class="row">
@@ -98,6 +99,7 @@
                     <p><a href="http://http://developer.yahoo.com/yql/">Yahoo Query Language</a></p>
                     <p><a href="http://www.flickr.com/services/api/">flickr</a></p>
                     <p><a href="https://developers.google.com/maps/">Google Maps</a></p>
+                    <p><a href="http://www.timeshighereducation.co.uk/">Times Higher Education</a></p>
                 </div>
                 <div class="text-center col-md-4">
                     <h3>Globe</h3>
