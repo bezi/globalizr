@@ -15,12 +15,92 @@
     </div>
     <div class="row">
         <ul class="about-list">
-            <li><a href="/about/#what"><button class="btn my-btn">What</button></a></li>
-            <li><a href="/about/#how"><button class="btn my-btn">How</button></a></li>
-            <li><a href="/about/#about"><button class="btn my-btn">About</button></a></li>
+            <li><button class="btn what-btn">What</button></li>
+            <li><button class="btn how-btn">How</button></li>
+            <li><button class="btn about-btn">About</button></li>
         </ul>
     </div>
 </div><!-- /.container -->
+<div id="what-info" class="info-div">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1>What is globalizr?</h1>
+            <p class="lead">globalizr is a next generation data visualization tool. Centered around the idea that information should be both useful and beautiful, both easy-to-use and powerful, globalizr takes database queries and plots them on a global scale. First, we take geographic demographic data from many different data stores and accumulate it. Then, once the user (you!) makes a query, it retrieves the needed data and renders a three-dimensional, interactive globe depicting the query. Give it a shot! Head over to the &ldquo;About&rdquo; page to check out some sample queries!</p>
+            <p class="lead">All of this is fully pluggable as well. We offer an API so that any user can retrieve our aggregated geometric data. The data is transmitted in JSON format, consisting of mainly longitude-latitude pairs and their corresponding magnitudes. If you use this data, <a href="mailto:admin@organizr.org">let us know</a>! We love hearing all the cool things that people are doing.</p>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="about-list">
+            <li><button id="what-btn-back" class="btn">What</button></li>
+            <li><button class="btn how-btn">How</button></li>
+            <li><button class="btn about-btn">About</button></li>
+        </ul>
+    </div>
+</div>
+<div id="how-info" class="info-div">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1>How do I use globalizr?</h1>
+            <p class="lead">To use globalizr, you have to construct a <em>query</em> in the format <em>&lt;interface&gt;&lt;metric&gt;</em>. What this means is that you specify what type of data to retrieve and what metric to display about that data. Check out some of the awesome starter queries we have below!</p>
+            <ul class="no-bullet">
+                <li class="lead"><a href="#">flickr interesting</a></li>
+                <li class="lead"><a href="#">finance tickers</a></li>
+                <li class="lead"><a href="#">finance percent-change</a></li>
+                <li class="lead"><a href="#">weather capitals</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="about-list">
+            <li><button class="btn what-btn">What</button></li>
+            <li><button id="how-btn-back" class="btn">How</button></li>
+            <li><button class="btn about-btn">About</button></li>
+        </ul>
+    </div>
+</div>
+<div id="about-info" class="info-div">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1>About globalizr</h1>
+            <h2>Context</h2>
+            <div id="devs-row" class="row">
+                <img class="col-md-3 img-circle" src="{% static 'imgs/devs/oscar-bw.jpg' %}" />
+                <img class="col-md-3 img-circle" src="{% static 'imgs/devs/sinan-bw.jpg' %}" />
+                <img class="col-md-3 img-circle" src="{% static 'imgs/devs/andre-bw.jpg' %}" />
+                <img class="col-md-3 img-circle" src="{% static 'imgs/devs/jacob-bw.jpg' %}" />
+            </div>
+            <p class="lead">globalizr was created at <a href="http://www.hackprinceton.com/">Hack.Princeton</a> by <a href="http://www.oscarbezi.com/">Oscar Bezi</a>, <a href="mailto:cepel.sinan@gmail.com">Sinan Cepel</a>, <a href="mailto:ajia@gmail.com">Andre Jia</a>, and <a href="http://www.jacobzimmerman.me">Jacob Zimmerman</a>, CS freshmen at <a href="http://www.cmu.edu/">Carnegie Mellon University</a>.</p>
+            <h2>Technologies</h2>
+            <p class="lead">Due to data aggregation nature of globalizr, a multitude of APIs and backend technologies are working together behind the scenes. Check out the list below to learn more.</p>
+            <div class="row">
+                <div class="text-center col-md-4">
+                    <h3>Infrastructure</h3>
+                    <p>The deployment environment consists of a custom <a href="http://www.getbootstrap.com">Bootstrap</a> build for the frontend and a <a href="http://www.heroku.com">Heroku</a> instance running <a href="http://www.djangoproject.com">Django</a> on the backend.</p>
+                </div>
+                <div class="text-center col-md-4">
+                    <h3>Data</h3>
+                    <p>We designed this system to be able to interface with any system where we can get JSON data that has GPS data paired with values. For this reason, we were able to draw upon a multitude of data retrieval APIs, including the following:</p>
+                    <ul class="no-bullet">
+                        <li><a href="http://http://developer.yahoo.com/yql/">Yahoo Query Language</a></li>
+                        <li><a href="http://www.flickr.com/services/api/">flickr</a></li>
+                        <li><a href="https://developers.google.com/maps/">Google Maps</a></li>
+                    </ul>
+                </div>
+                <div class="text-center col-md-4">
+                    <h3>Globe</h3>
+                    <p>To render the actual data, we use the Google Chrome Experiment <a href="http://www.chromeexperiments.com/globe">The WebGL Globe</a>, which is an open platform for data visualization.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        <ul class="about-list">
+            <li><button class="btn what-btn">What</button></li>
+            <li><button class="btn how-btn">How</button></li>
+            <li><button id="about-btn-back"class="btn">About</button></li>
+        </ul>
+    </div>
+</div>
 <div id="legend">
     
 </div>
@@ -33,6 +113,30 @@
     $(document).ready(function() {
         $("#input-wrapper").css("opacity", 1);
         $(".about-list").css("opacity", 1);
+    });
+    $(".what-btn").on("click", function() {
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+        $("#about-info").css("z-index", -1).css("opacity", 0);
+        $("#what-info").css("z-index", 1).css("opacity", 1);
+    });
+    $(".how-btn").on("click", function() {
+        $("#what-info").css("z-index", -1).css("opacity", 0);
+        $("#about-info").css("z-index", -1).css("opacity", 0);
+        $("#how-info").css("z-index", 1).css("opacity", 1);
+    });
+    $(".about-btn").on("click", function() {
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+        $("#what-info").css("z-index", -1).css("opacity", 0);
+        $("#about-info").css("z-index", 1).css("opacity", 1);
+    });
+    $("#what-btn-back").on("click", function() {
+        $("#what-info").css("z-index", -1).css("opacity", 0);
+    });
+    $("#how-btn-back").on("click", function() {
+        $("#how-info").css("z-index", -1).css("opacity", 0);
+    });
+    $("#about-btn-back").on("click", function() {
+        $("#about-info").css("z-index", -1).css("opacity", 0);
     });
 </script>
 {% endblock %}
