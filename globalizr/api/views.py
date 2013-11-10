@@ -6,10 +6,10 @@ from interfaces.flickr import parse_interface_flickr
 from django.http import HttpResponse
 
 INTERFACE_DIR = os.path.abspath(os.path.dirname(__file__)) + '/interfaces/json/'
-INTERFACES = ["flickr"];
-def interface(request, interface, metric="default", disc="default"):
-    if interface in INTERFACES:
-        response = open(INTERFACE_DIR + interface + '.json').read()
+INTERFACES = ["flickr", "weather"];
+def interface(request, interface, disc="default"):
+    if interface.lower() in INTERFACES:
+        response = open(INTERFACE_DIR + interface.lower() + '.json').read()
     else:
         data = { "status": 1 }
         response = json.dumps(data, sort_keys=True)
