@@ -153,7 +153,7 @@ a:hover {
 }
 
 .globe-screen form input {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(70, 70, 70, 0.35);
     height: 50px;
     width: 33%;
     margin-top: 10px;
