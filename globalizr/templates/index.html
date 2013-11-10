@@ -109,10 +109,6 @@
     <script type="text/javascript" src="{% static 'js/Tween.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/globe.js' %}"></script>
     <script type="text/javascript">
-    function hideGUI() {
-        $("#input-wrapper").css('display', 'none');
-        $("#about-list").css('display', 'none');
-    }
 
     function submitQuery() {
         query = $("#landing-search").val();
@@ -158,6 +154,11 @@
 {% endblock %}
 {% block scripts %}
 <script>
+    function hideGUI() {
+        $("#input-wrapper").css('display', 'none');
+        $(".about-list").css('display', 'none');
+    }
+
     $(document).ready(function() {
         $("#input-wrapper").css("opacity", 1);
         $(".about-list").css("opacity", 1);
