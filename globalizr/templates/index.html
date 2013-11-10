@@ -104,47 +104,49 @@
     </div>
 </div>
 <div id="container"></div>
-    <script type="text/javascript" src="{% static 'js/Detector.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/three.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/Tween.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/globe.js' %}"></script>
-    <script type="text/javascript">
+<script type="text/javascript" src="{% static 'js/Detector.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/three.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/Tween.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/globe.js' %}"></script>
+<script type="text/javascript">
+function submitQuery() {
+    query = $("#landing-search").val();
+    if(!Detector.webgl){
+        Detector.addGetWebGLMessage();
+    } else {
+        var container = document.getElementById('container');
+        var globe = new DAT.Globe(container);
 
-    function submitQuery() {
-        query = $("#landing-search").val();
-        if(!Detector.webgl){
-            Detector.addGetWebGLMessage();
-        } else {
-
-          var container = document.getElementById('container');
-          var globe = new DAT.Globe(container);
-
-          console.log(globe);
-          var i, tweens = [];
-          
-          var xhr;
-          TWEEN.start();
-          
-          xhr = new XMLHttpRequest();
-          xhr.open('GET', '/api/interface/flickr/interesting/', true);
-          xhr.onreadystatechange = function(e) {
+        console.log(globe);
+        var i, tweens = [];
+      
+        var xhr;
+        TWEEN.start();
+      
+        xhr = new XMLHttpRequest();
+        var interf = "flickr";
+        var metric = "interesting";
+        var disc = "month1";
+        
+        var addr = "/api/interface/" + interf + "/" + metric + "/"+  disc + "/";
+        xhr.open('GET', addr, true);
+        xhr.onreadystatechange = function(e) {
             if (xhr.readyState === 4) {
-              if (xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText);
-                window.data = data;
-                if (data.status == 0) {
-                        globe.addData(data.data[data.keys[0]].pos_data.data, {format: 'magnitude', name: data.data[data.keys[0]].pos_data.name, animated: true});
-                }
-                globe.createPoints();
-                globe.animate();
-              }
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.status == 0) { // no errors
+                        globe.addData(response.data[disc], {format: 'magnitude', name: response.metadata[disc], animated: true});
+                    }
+                    globe.createPoints();
+                    globe.animate();
+                } 
             }
-          };
-          xhr.send(null);
-        }
-        return false;
+        };
+        xhr.send(null);
     }
-    </script>
+    return false;   
+}
+</script>
 <div id="legend">
     
 </div>
