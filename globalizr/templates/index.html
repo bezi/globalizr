@@ -17,9 +17,9 @@
     </div>
     <div class="row">
         <ul class="about-list">
-            <li><button class="btn what-btn">What</button></li>
-            <li><button class="btn how-btn">How</button></li>
-            <li><button class="btn about-btn">About</button></li>
+            <li><button id="what-btn" class="btn what-btn">What</button></li>
+            <li><button id="how-btn" class="btn how-btn">How</button></li>
+            <li><button id="about-btn" class="btn about-btn">About</button></li>
         </ul>
     </div>
 </div><!-- /.container -->
@@ -166,31 +166,46 @@
             e.preventDefault();
             hideGUI();
             submitQuery();
+            $("#landing-header").addClass('globe-screen');
+            $("#landing-form").addClass('globe-screen');
         });
     });
     $(".what-btn").on("click", function() {
+        $("#input-wrapper").css("opacity", 0);
         $("#how-info").css("z-index", -1).css("opacity", 0);
         $("#about-info").css("z-index", -1).css("opacity", 0);
         $("#what-info").css("z-index", 1).css("opacity", 1);
     });
     $(".how-btn").on("click", function() {
+        $("#input-wrapper").css("opacity", 0);
         $("#what-info").css("z-index", -1).css("opacity", 0);
         $("#about-info").css("z-index", -1).css("opacity", 0);
         $("#how-info").css("z-index", 1).css("opacity", 1);
     });
     $(".about-btn").on("click", function() {
+        $("#input-wrapper").css("opacity", 0);
         $("#how-info").css("z-index", -1).css("opacity", 0);
         $("#what-info").css("z-index", -1).css("opacity", 0);
         $("#about-info").css("z-index", 1).css("opacity", 1);
     });
     $("#what-btn-back").on("click", function() {
         $("#what-info").css("z-index", -1).css("opacity", 0);
+        $("#input-wrapper").css("opacity", 1);
     });
     $("#how-btn-back").on("click", function() {
         $("#how-info").css("z-index", -1).css("opacity", 0);
+        $("#input-wrapper").css("opacity", 1);
     });
     $("#about-btn-back").on("click", function() {
         $("#about-info").css("z-index", -1).css("opacity", 0);
+        $("#input-wrapper").css("opacity", 1);
+    });
+    $("landing-header").on("click", function() {
+        // Home
+        $("#landing-header").removeClass('globe-screen');
+        $("#landing-form").removeClass('globe-screen');
+        $("#input-wrapper").css("opacity", 1);
+        $(".about-list").css("opacity", 1);
     });
 </script>
 {% endblock %}
