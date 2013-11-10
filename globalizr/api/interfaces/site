@@ -1,22 +1,46 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en-US">
-<head>
-    <title>Symbol Lookup from Yahoo! Finance</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="Search for ticker symbols for Stocks, Mutual Funds, ETFs, Indices and Futures on Yahoo! Finance.">
-    <meta name="keywords" content="symbol lookup, ticker lookup, stock symbol lookup">
-    
-<link rel="stylesheet" type="text/css" href="http://l.yimg.com/bm/combo?fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/reset-fonts-grids/2.0.0/mini/reset-fonts-grids.css&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/tabview/assets/skins/sam/2.0.0/mini/tabview.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_base.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/lookup.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_siab_lookup.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_lego.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_topnav_base_lego.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_topnav_theme_lego.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_portfolio.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_quotebar.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_footer_base.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_nav_footer_theme.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yui_helper.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_symbol_suggest.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/lego.css&fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_theme_teal.css" />
-<script type="text/javascript" src="http://l.yimg.com/bm/combo?fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/yahoo-dom-event/2.0.0/mini/yahoo-dom-event.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/element/2.0.0/mini/element-min.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/get/2.0.0/mini/get.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/tabview/2.0.0/mini/tabview-min.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yui-min-3.5.1.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/yuiloader-dom-event/2.0.0/mini/yuiloader-dom-event.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/cookie/2.0.0/mini/cookie.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/connection/2.0.0/mini/connection.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/container/2.0.0/mini/container.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/datasource/2.0.0/mini/datasource.js&fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/autocomplete/2.0.0/mini/autocomplete.js"></script>
-</head>
-<body id="yfi_fp" class="yfi_lookup yfin_gs gsg-0">
-    <!-- skip nav -->
-    <a href="#y-nav-sec" id="skip_nav">Skip navigation</a>
-    <!--skip nav -->
-        
-        <div id="yfi_fp_hd">
-            <div class="yfi_doc yog-hd" id="yog-hd">
-                <link type='text/css' rel='stylesheet' href='http://l.yimg.com/zz/combo?kx/yucs/uh3/uh/css/811/uh_non_mail-min.css&kx/yucs/uh3/uh3_top_bar/css/262/no_icons-min.css&kx/yucs/uh3/search/css/439/blue_border-min.css&kx/yucs/uh3/breakingnews/css/1/breaking_news-min.css&kx/yucs/uh3/uh3_contextual_shortcuts/css/6/generic.css'/><div class=""><style>#header,#y-hd,#hd .yfi_doc,#yfi_hd{background:#fff !important}#yfin_gs #yfimh #yucsHead,#yfin_gs #yfi_doc #yucsHead,#yfin_gs #yfi_fp_hd #yucsHead,#yfin_gs #y-hd #yucsHead,#yfin_gs #yfi_hd #yucsHead,#yfin_gs #yfi-doc #yucsHead{-webkit-box-shadow:0 0 9px 0 #490f76 !important;-moz-box-shadow:0 0 9px 0 #490f76 !important;box-shadow:0 0 9px 0 #490f76 !important;border-bottom:1px solid #490f76 !important}#yog-hd,#yfi-hd,#ysp-hd,#hd,#yfimh,#yfi_hd,#yfi_fp_hd,#masthead,#yfi_nav_header #navigation,#y-nav #navigation,.ad_in_head{background-color:#fff;background-image:none}#header,#hd .yfi_doc,#y-hd .yfi_doc,#yfi_hd .yfi_doc{width:100% !important}#yucs{margin:0 auto;width:970px}#yfi_nav_header,.y-nav-legobg,#y-nav #navigation{margin:0 auto;width:970px}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px}#yucs-profile_text{max-width:65px}#yog-bd .yom-stage{background:transparent}#yog-hd{height:84px}.yog-bd,.yog-grid{padding:4px 10px}#yucs #yucs-search .yucs-button_theme{background:-moz-linear-gradient(top, #007090 0, #006e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #007090), color-stop(100%, #006e8e));background:-webkit-linear-gradient(top, #007090 0, #006e8e 100%);background:-o-linear-gradient(top, #007090 0, #006e8e 100%);background:-ms-linear-gradient(top, #007090 0, #006e8e 100%);background:linear-gradient(to bottom, #007090 0, #006e8e 100%);-webkit-box-shadow:inset 0 1px 3px 0 #0081a2;box-shadow:inset 0 1px 3px 0 #0081a2;background-color:#006e8e;background-color:transparent#header,#y-hd,#hd .yfi_doc,#yfi_hd{background:#fff !important}#yfin_gs #yfimh #yucsHead,#yfin_gs #yfi_doc #yucsHead,#yfin_gs #yfi_fp_hd #yucsHead,#yfin_gs #y-hd #yucsHead,#yfin_gs #yfi_hd #yucsHead,#yfin_gs #yfi-doc #yucsHead{-webkit-box-shadow:0 0 9px 0 #490f76 !important;-moz-box-shadow:0 0 9px 0 #490f76 !important;box-shadow:0 0 9px 0 #490f76 !important;border-bottom:1px solid #490f76 !important}#yog-hd,#yfi-hd,#ysp-hd,#hd,#yfimh,#yfi_hd,#yfi_fp_hd,#masthead,#yfi_nav_header #navigation,#y-nav #navigation,.ad_in_head{background-color:#fff;background-image:none}#header,#hd .yfi_doc,#y-hd .yfi_doc,#yfi_hd .yfi_doc{width:100% !important}#yucs{margin:0 auto;width:970px}#yfi_nav_header,.y-nav-legobg,#y-nav #navigation{margin:0 auto;width:970px}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px}#yucs-profile_text{max-width:65px}#yog-bd .yom-stage{background:transparent}#yog-hd{height:84px}.yog-bd,.yog-grid{padding:4px 10px}#yucs #yucs-search .yucs-button_theme{background:-moz-linear-gradient(top, #007090 0, #006e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #007090), color-stop(100%, #006e8e));background:-webkit-linear-gradient(top, #007090 0, #006e8e 100%);background:-o-linear-gradient(top, #007090 0, #006e8e 100%);background:-ms-linear-gradient(top, #007090 0, #006e8e 100%);background:linear-gradient(to bottom, #007090 0, #006e8e 100%);-webkit-box-shadow:inset 0 1px 3px 0 #0081a2;box-shadow:inset 0 1px 3px 0 #0081a2;background-color:#006e8e;background-color:transparent/IE9;background-color:transparent;*background:none;border:1px solid #595959}#yucs #yucs-search #yucs-prop_search_button_wrapper .yucs-gradient{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007090', endColorstr='#006e8e',GradientType=0 );-ms-filter:"progid:DXImageTransform.Microsoft.gradient( startColorstr='#007090', endColorstr='#006e8e',GradientType=0 )";background-color:#006e8e/IE9}#yucs #yucs-search #yucs-prop_search_button_wrapper{*border:1px solid #595959}@media all{#yucs.yucs-mc,#yucs-top-inner{width:auto !important;margin:0 !important}#yucsHead{_text-align:left !important}#yucs-top-inner,#yucs.yucs-mc{min-width:970px !important;max-width:1240px !important;padding-left:10px !important;padding-right:10px !important}#yucs.yucs-mc{_width:970px !important;_margin:0 !important}#yucsHead #yucs-search{position:absolute;left:170px;max-width:none !important;margin-left:0;_left:170px;_width:510px !important}.yog-ad-billboard #yucs-top-inner,.yog-ad-billboard #yucs.yucs-mc{max-width:1130px !important}}#yucs #yucs-logo{width:150px !important;height:34px !important}#yucs #yucs-logo div{width:94px !important;margin:0 auto !important}.lt #yucs-logo div{background-position:-121px center !important}#yucs-logo a{margin-left:-13px !important}/IE9;background-color:transparent;*background:none;border:1px solid #595959}#yucs #yucs-search #yucs-prop_search_button_wrapper .yucs-gradient{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007090', endColorstr='#006e8e',GradientType=0 );-ms-filter:"progid:DXImageTransform.Microsoft.gradient( startColorstr='#007090', endColorstr='#006e8e',GradientType=0 )";background-color:#006e8e#header,#y-hd,#hd .yfi_doc,#yfi_hd{background:#fff !important}#yfin_gs #yfimh #yucsHead,#yfin_gs #yfi_doc #yucsHead,#yfin_gs #yfi_fp_hd #yucsHead,#yfin_gs #y-hd #yucsHead,#yfin_gs #yfi_hd #yucsHead,#yfin_gs #yfi-doc #yucsHead{-webkit-box-shadow:0 0 9px 0 #490f76 !important;-moz-box-shadow:0 0 9px 0 #490f76 !important;box-shadow:0 0 9px 0 #490f76 !important;border-bottom:1px solid #490f76 !important}#yog-hd,#yfi-hd,#ysp-hd,#hd,#yfimh,#yfi_hd,#yfi_fp_hd,#masthead,#yfi_nav_header #navigation,#y-nav #navigation,.ad_in_head{background-color:#fff;background-image:none}#header,#hd .yfi_doc,#y-hd .yfi_doc,#yfi_hd .yfi_doc{width:100% !important}#yucs{margin:0 auto;width:970px}#yfi_nav_header,.y-nav-legobg,#y-nav #navigation{margin:0 auto;width:970px}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px}#yucs-profile_text{max-width:65px}#yog-bd .yom-stage{background:transparent}#yog-hd{height:84px}.yog-bd,.yog-grid{padding:4px 10px}#yucs #yucs-search .yucs-button_theme{background:-moz-linear-gradient(top, #007090 0, #006e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #007090), color-stop(100%, #006e8e));background:-webkit-linear-gradient(top, #007090 0, #006e8e 100%);background:-o-linear-gradient(top, #007090 0, #006e8e 100%);background:-ms-linear-gradient(top, #007090 0, #006e8e 100%);background:linear-gradient(to bottom, #007090 0, #006e8e 100%);-webkit-box-shadow:inset 0 1px 3px 0 #0081a2;box-shadow:inset 0 1px 3px 0 #0081a2;background-color:#006e8e;background-color:transparent/IE9;background-color:transparent;*background:none;border:1px solid #595959}#yucs #yucs-search #yucs-prop_search_button_wrapper .yucs-gradient{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007090', endColorstr='#006e8e',GradientType=0 );-ms-filter:"progid:DXImageTransform.Microsoft.gradient( startColorstr='#007090', endColorstr='#006e8e',GradientType=0 )";background-color:#006e8e/IE9}#yucs #yucs-search #yucs-prop_search_button_wrapper{*border:1px solid #595959}@media all{#yucs.yucs-mc,#yucs-top-inner{width:auto !important;margin:0 !important}#yucsHead{_text-align:left !important}#yucs-top-inner,#yucs.yucs-mc{min-width:970px !important;max-width:1240px !important;padding-left:10px !important;padding-right:10px !important}#yucs.yucs-mc{_width:970px !important;_margin:0 !important}#yucsHead #yucs-search{position:absolute;left:170px;max-width:none !important;margin-left:0;_left:170px;_width:510px !important}.yog-ad-billboard #yucs-top-inner,.yog-ad-billboard #yucs.yucs-mc{max-width:1130px !important}}#yucs #yucs-logo{width:150px !important;height:34px !important}#yucs #yucs-logo div{width:94px !important;margin:0 auto !important}.lt #yucs-logo div{background-position:-121px center !important}#yucs-logo a{margin-left:-13px !important}/IE9}#yucs #yucs-search #yucs-prop_search_button_wrapper{*border:1px solid #595959}@media all{#yucs.yucs-mc,#yucs-top-inner{width:auto !important;margin:0 !important}#yucsHead{_text-align:left !important}#yucs-top-inner,#yucs.yucs-mc{min-width:970px !important;max-width:1240px !important;padding-left:10px !important;padding-right:10px !important}#yucs.yucs-mc{_width:970px !important;_margin:0 !important}#yucsHead #yucs-search{position:absolute;left:170px;max-width:none !important;margin-left:0;_left:170px;_width:510px !important}.yog-ad-billboard #yucs-top-inner,.yog-ad-billboard #yucs.yucs-mc{max-width:1130px !important}}#yucs #yucs-logo{width:150px !important;height:34px !important}#yucs #yucs-logo div{width:94px !important;margin:0 auto !important}.lt #yucs-logo div{background-position:-121px center !important}#yucs-logo a{margin-left:-13px !important}</style><style>#yog-hd .yom-bar, #yog-hd .yom-nav, #y-nav, #hd .ysp-full-bar,  #yfi_nav_header, #hd .mast {
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>ASTEC.BO Profile | ASTEC LIFE Stock - Yahoo! Finance</title><script type="text/javascript" src="http://l.yimg.com/a/i/us/fi/03rd/yg_csstare_nobgcolor.js"></script><link rel="stylesheet" href="http://l.yimg.com/zz/combo?kx/yucs/uh3/uh/css/811/uh_non_mail-min.css&amp;kx/yucs/uh3/uh3_top_bar/css/262/no_icons-min.css&amp;kx/yucs/uh3/search/css/439/blue_border-min.css&amp;kx/yucs/uh3/breakingnews/css/1/breaking_news-min.css&amp;kx/yucs/uh3/uh3_contextual_shortcuts/css/6/generic.css&amp;bm/lib/fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_yoda_legacy_lego_concat.css&amp;bm/lib/fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_symbol_suggest.css&amp;bm/lib/fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yui_helper.css&amp;bm/lib/fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_theme_teal.css" type="text/css"><script type="text/javascript" src="http://l1.yimg.com/bm/combo?fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yui-min-3.9.1.js&amp;fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/yuiloader-dom-event/2.0.0/mini/yuiloader-dom-event.js&amp;fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/container/2.0.0/mini/container.js&amp;fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/datasource/2.0.0/mini/datasource.js&amp;fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/autocomplete/2.0.0/mini/autocomplete.js"></script><script type="text/javascript" src="http://l.yimg.com/os/mit/td/td-server-my-0.1.301/asset-loader-min-be18851.js"></script><link rel="stylesheet" href="http://l1.yimg.com/bm/combo?fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_follow_quote.css" type="text/css"><link rel="stylesheet" href="http://l1.yimg.com/bm/combo?fi/common/p/d/static/css/2.0.298290/2.0.0/mini/yfi_follow_stencil.css" type="text/css"><script type="text/javascript" src="http://l1.yimg.com/bm/combo?fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_follow_quote.js"></script><script language="javascript">
+                YUI().use('stencil', 'follow-quote', 'node', function (Y) {
+                    var conf = {'xhrBase': '/', 'lang': 'en-US', 'region': 'US', 'loginUrl': 'https://login.yahoo.com/config/login_verify2?&.done=http://finance.yahoo.com/q?s=ASTEC.BO&.intl=us'};
+
+                    Y.Media.FollowQuote.init(conf, function () {
+                        var exchNode = null,
+                            followSecClass = "",
+                            followHtml = "",
+                            followNode = null;
+
+                        followSecClass = Y.Media.FollowQuote.getFollowSectionClass();
+                        followHtml = Y.Media.FollowQuote.getFollowBtnHTML({ ticker: 'ASTEC.BO', addl_classes: "follow-quote-always-visible", showFollowText: true });
+                        followNode = Y.Node.create(followHtml);
+                        exchNode = Y.one(".wl_sign");
+                        if (!Y.Lang.isNull(exchNode)) { 
+                            exchNode.append(followNode);
+                        }
+                    });
+                });
+        </script><style>
+       	    /* [bug 3856904]*/
+            #ygma.ynzgma #teleban {width:100%;}
+            
+            /* Style to override message boards template CSS */
+            .mboard div#footer {width: 970px !important;}
+            .mboard #screen {width: 970px !important; text-align:left !important;}
+            .mboard div#screen {width: 970px !important; text-align:left !important;}
+            .mboard table.yfnc_modtitle1 td{padding-top:10px;padding-bottom:10px;} 
+	</style><meta name="keywords" content="company profile,business summary,company management,company introduction,key statistics,officers"><meta name="description" content="See the company profile for ASTEC LIFE (ASTEC.BO) including business summary, industry/sector information, number of employees, business summary, corporate governance, key executives and their compensation."><script type="text/javascript"><!--
+    var yfid    = document;
+    var yfiagt  = navigator.userAgent.toLowerCase();
+    var yfidom  = yfid.getElementById;
+    var yfiie   = yfid.all;
+    var yfimac  = (yfiagt.indexOf('mac')!=-1);
+    var yfimie  = (yfimac&&yfiie);
+    var yfiie5  = (yfiie&&yfidom&&!yfimie&&!Array.prototype.pop);
+    var yfiie55 = (yfiie&&yfidom&&!yfimie&&!yfiie5);
+    var yfiie6  = (yfiie55&&yfid.compatMode);
+    var yfisaf  = ((yfiagt.indexOf('safari')>-1)?1:0);
+    var yfimoz  = ((yfiagt.indexOf('gecko')>-1&&!yfisaf)?1:0);
+    var yfiopr  = ((yfiagt.indexOf('opera')>-1&&!yfisaf)?1:0);
+            //--></script></head><body class=" intl-us yfin_gs gsg-0"><div id="masthead"><div class="yfi_doc yog-hd" id="yog-hd"><div class=""><style>#header,#y-hd,#hd .yfi_doc,#yfi_hd{background:#fff !important}#yfin_gs #yfimh #yucsHead,#yfin_gs #yfi_doc #yucsHead,#yfin_gs #yfi_fp_hd #yucsHead,#yfin_gs #y-hd #yucsHead,#yfin_gs #yfi_hd #yucsHead,#yfin_gs #yfi-doc #yucsHead{-webkit-box-shadow:0 0 9px 0 #490f76 !important;-moz-box-shadow:0 0 9px 0 #490f76 !important;box-shadow:0 0 9px 0 #490f76 !important;border-bottom:1px solid #490f76 !important}#yog-hd,#yfi-hd,#ysp-hd,#hd,#yfimh,#yfi_hd,#yfi_fp_hd,#masthead,#yfi_nav_header #navigation,#y-nav #navigation,.ad_in_head{background-color:#fff;background-image:none}#header,#hd .yfi_doc,#y-hd .yfi_doc,#yfi_hd .yfi_doc{width:100% !important}#yucs{margin:0 auto;width:970px}#yfi_nav_header,.y-nav-legobg,#y-nav #navigation{margin:0 auto;width:970px}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px}#yucs-profile_text{max-width:65px}#yog-bd .yom-stage{background:transparent}#yog-hd{height:84px}.yog-bd,.yog-grid{padding:4px 10px}#yucs #yucs-search .yucs-button_theme{background:-moz-linear-gradient(top, #007090 0, #006e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #007090), color-stop(100%, #006e8e));background:-webkit-linear-gradient(top, #007090 0, #006e8e 100%);background:-o-linear-gradient(top, #007090 0, #006e8e 100%);background:-ms-linear-gradient(top, #007090 0, #006e8e 100%);background:linear-gradient(to bottom, #007090 0, #006e8e 100%);-webkit-box-shadow:inset 0 1px 3px 0 #0081a2;box-shadow:inset 0 1px 3px 0 #0081a2;background-color:#006e8e;background-color:transparent#header,#y-hd,#hd .yfi_doc,#yfi_hd{background:#fff !important}#yfin_gs #yfimh #yucsHead,#yfin_gs #yfi_doc #yucsHead,#yfin_gs #yfi_fp_hd #yucsHead,#yfin_gs #y-hd #yucsHead,#yfin_gs #yfi_hd #yucsHead,#yfin_gs #yfi-doc #yucsHead{-webkit-box-shadow:0 0 9px 0 #490f76 !important;-moz-box-shadow:0 0 9px 0 #490f76 !important;box-shadow:0 0 9px 0 #490f76 !important;border-bottom:1px solid #490f76 !important}#yog-hd,#yfi-hd,#ysp-hd,#hd,#yfimh,#yfi_hd,#yfi_fp_hd,#masthead,#yfi_nav_header #navigation,#y-nav #navigation,.ad_in_head{background-color:#fff;background-image:none}#header,#hd .yfi_doc,#y-hd .yfi_doc,#yfi_hd .yfi_doc{width:100% !important}#yucs{margin:0 auto;width:970px}#yfi_nav_header,.y-nav-legobg,#y-nav #navigation{margin:0 auto;width:970px}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px}#yucs-profile_text{max-width:65px}#yog-bd .yom-stage{background:transparent}#yog-hd{height:84px}.yog-bd,.yog-grid{padding:4px 10px}#yucs #yucs-search .yucs-button_theme{background:-moz-linear-gradient(top, #007090 0, #006e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #007090), color-stop(100%, #006e8e));background:-webkit-linear-gradient(top, #007090 0, #006e8e 100%);background:-o-linear-gradient(top, #007090 0, #006e8e 100%);background:-ms-linear-gradient(top, #007090 0, #006e8e 100%);background:linear-gradient(to bottom, #007090 0, #006e8e 100%);-webkit-box-shadow:inset 0 1px 3px 0 #0081a2;box-shadow:inset 0 1px 3px 0 #0081a2;background-color:#006e8e;background-color:transparent/IE9;background-color:transparent;*background:none;border:1px solid #595959}#yucs #yucs-search #yucs-prop_search_button_wrapper .yucs-gradient{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007090', endColorstr='#006e8e',GradientType=0 );-ms-filter:"progid:DXImageTransform.Microsoft.gradient( startColorstr='#007090', endColorstr='#006e8e',GradientType=0 )";background-color:#006e8e/IE9}#yucs #yucs-search #yucs-prop_search_button_wrapper{*border:1px solid #595959}@media all{#yucs.yucs-mc,#yucs-top-inner{width:auto !important;margin:0 !important}#yucsHead{_text-align:left !important}#yucs-top-inner,#yucs.yucs-mc{min-width:970px !important;max-width:1240px !important;padding-left:10px !important;padding-right:10px !important}#yucs.yucs-mc{_width:970px !important;_margin:0 !important}#yucsHead #yucs-search{position:absolute;left:170px;max-width:none !important;margin-left:0;_left:170px;_width:510px !important}.yog-ad-billboard #yucs-top-inner,.yog-ad-billboard #yucs.yucs-mc{max-width:1130px !important}}#yucs #yucs-logo{width:150px !important;height:34px !important}#yucs #yucs-logo div{width:94px !important;margin:0 auto !important}.lt #yucs-logo div{background-position:-121px center !important}#yucs-logo a{margin-left:-13px !important}/IE9;background-color:transparent;*background:none;border:1px solid #595959}#yucs #yucs-search #yucs-prop_search_button_wrapper .yucs-gradient{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007090', endColorstr='#006e8e',GradientType=0 );-ms-filter:"progid:DXImageTransform.Microsoft.gradient( startColorstr='#007090', endColorstr='#006e8e',GradientType=0 )";background-color:#006e8e#header,#y-hd,#hd .yfi_doc,#yfi_hd{background:#fff !important}#yfin_gs #yfimh #yucsHead,#yfin_gs #yfi_doc #yucsHead,#yfin_gs #yfi_fp_hd #yucsHead,#yfin_gs #y-hd #yucsHead,#yfin_gs #yfi_hd #yucsHead,#yfin_gs #yfi-doc #yucsHead{-webkit-box-shadow:0 0 9px 0 #490f76 !important;-moz-box-shadow:0 0 9px 0 #490f76 !important;box-shadow:0 0 9px 0 #490f76 !important;border-bottom:1px solid #490f76 !important}#yog-hd,#yfi-hd,#ysp-hd,#hd,#yfimh,#yfi_hd,#yfi_fp_hd,#masthead,#yfi_nav_header #navigation,#y-nav #navigation,.ad_in_head{background-color:#fff;background-image:none}#header,#hd .yfi_doc,#y-hd .yfi_doc,#yfi_hd .yfi_doc{width:100% !important}#yucs{margin:0 auto;width:970px}#yfi_nav_header,.y-nav-legobg,#y-nav #navigation{margin:0 auto;width:970px}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px}#yucs-profile_text{max-width:65px}#yog-bd .yom-stage{background:transparent}#yog-hd{height:84px}.yog-bd,.yog-grid{padding:4px 10px}#yucs #yucs-search .yucs-button_theme{background:-moz-linear-gradient(top, #007090 0, #006e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #007090), color-stop(100%, #006e8e));background:-webkit-linear-gradient(top, #007090 0, #006e8e 100%);background:-o-linear-gradient(top, #007090 0, #006e8e 100%);background:-ms-linear-gradient(top, #007090 0, #006e8e 100%);background:linear-gradient(to bottom, #007090 0, #006e8e 100%);-webkit-box-shadow:inset 0 1px 3px 0 #0081a2;box-shadow:inset 0 1px 3px 0 #0081a2;background-color:#006e8e;background-color:transparent/IE9;background-color:transparent;*background:none;border:1px solid #595959}#yucs #yucs-search #yucs-prop_search_button_wrapper .yucs-gradient{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007090', endColorstr='#006e8e',GradientType=0 );-ms-filter:"progid:DXImageTransform.Microsoft.gradient( startColorstr='#007090', endColorstr='#006e8e',GradientType=0 )";background-color:#006e8e/IE9}#yucs #yucs-search #yucs-prop_search_button_wrapper{*border:1px solid #595959}@media all{#yucs.yucs-mc,#yucs-top-inner{width:auto !important;margin:0 !important}#yucsHead{_text-align:left !important}#yucs-top-inner,#yucs.yucs-mc{min-width:970px !important;max-width:1240px !important;padding-left:10px !important;padding-right:10px !important}#yucs.yucs-mc{_width:970px !important;_margin:0 !important}#yucsHead #yucs-search{position:absolute;left:170px;max-width:none !important;margin-left:0;_left:170px;_width:510px !important}.yog-ad-billboard #yucs-top-inner,.yog-ad-billboard #yucs.yucs-mc{max-width:1130px !important}}#yucs #yucs-logo{width:150px !important;height:34px !important}#yucs #yucs-logo div{width:94px !important;margin:0 auto !important}.lt #yucs-logo div{background-position:-121px center !important}#yucs-logo a{margin-left:-13px !important}/IE9}#yucs #yucs-search #yucs-prop_search_button_wrapper{*border:1px solid #595959}@media all{#yucs.yucs-mc,#yucs-top-inner{width:auto !important;margin:0 !important}#yucsHead{_text-align:left !important}#yucs-top-inner,#yucs.yucs-mc{min-width:970px !important;max-width:1240px !important;padding-left:10px !important;padding-right:10px !important}#yucs.yucs-mc{_width:970px !important;_margin:0 !important}#yucsHead #yucs-search{position:absolute;left:170px;max-width:none !important;margin-left:0;_left:170px;_width:510px !important}.yog-ad-billboard #yucs-top-inner,.yog-ad-billboard #yucs.yucs-mc{max-width:1130px !important}}#yucs #yucs-logo{width:150px !important;height:34px !important}#yucs #yucs-logo div{width:94px !important;margin:0 auto !important}.lt #yucs-logo div{background-position:-121px center !important}#yucs-logo a{margin-left:-13px !important}</style><style>#yog-hd .yom-bar, #yog-hd .yom-nav, #y-nav, #hd .ysp-full-bar,  #yfi_nav_header, #hd .mast {
 float: none;
 width: 970px;
 margin: 0 auto;
@@ -42,126 +66,51 @@ padding-left: 8px;
     #yfi-portfolios-multi-quotes #y-nav, #yfi-portfolios-multi-quotes #navigation, #yfi-portfolios-multi-quotes .y-nav-legobg, 
     #yfi-portfolios-my-portfolios #y-nav, #yfi-portfolios-my-portfolios #navigation, #yfi-portfolios-my-portfolios .y-nav-legobg {
         width : 100%;
-    }</style><div id="yucsHead" class="yucs-finance yucs-en-us "><div id="yucs-top-bar" class='yucs-ps'>    <div id='yucs-top-inner'>        <ul id='yucs-top-list'>            <li id='yucs-top-home'><a href="http://www.yahoo.com/"><span class="sp yucs-top-ico"></span>Home</a></li>            <li id='yucs-top-mail'><a href="http://mail.yahoo.com/">Mail</a></li>            <li id='yucs-top-news'><a href="http://news.yahoo.com/">News</a></li>            <li id='yucs-top-sports'><a href="http://sports.yahoo.com/">Sports</a></li>            <li id='yucs-top-finance'><a href="http://finance.yahoo.com/">Finance</a></li>            <li id='yucs-top-weather'><a href="http://weather.yahoo.com/"">Weather</a></li>            <li id='yucs-top-games'><a href="http://games.yahoo.com/">Games</a></li>            <li id='yucs-top-groups'><a href="http://groups.yahoo.com/">Groups</a></li>            <li id='yucs-top-answers'><a href="http://answers.yahoo.com/">Answers</a></li>            <li id='yucs-top-screen'><a href="http://screen.yahoo.com/">Screen</a></li>            <li id='yucs-top-flickr'><a href="http://www.flickr.com/">Flickr</a></li>            <li id='yucs-top-mobile'><a href="http://mobile.yahoo.com/">Mobile</a></li>            <li id='yucs-more' class='yucs-menu yucs-more-activate' data-ylt="/"><a href="javascript:void(0);" id='yucs-more-link' class='yucs-leavable'>More<span class="sp yucs-top-ico"></span></a>                <div id='yucs-top-menu'>                    <div class='yui3-menu-content'>                        <ul class='yucs-hide yucs-leavable'>                            <li id='yucs-top-omg'><a href="http://omg.yahoo.com/">omg!</a></li>                            <li id='yucs-top-shine'><a href="http://shine.yahoo.com/">Shine</a></li>                            <li id='yucs-top-movies'><a href="http://movies.yahoo.com/">Movies</a></li>                            <li id='yucs-top-music'><a href="http://music.yahoo.com/">Music</a></li>                            <li id='yucs-top-tv'><a href="http://tv.yahoo.com/">TV</a></li>                            <li id='yucs-top-health'><a href="http://health.yahoo.com/">Health</a></li>                            <li id='yucs-top-shopping'><a href="http://shopping.yahoo.com/">Shopping</a></li>                            <li id='yucs-top-travel'><a href="http://travel.yahoo.com/">Travel</a></li>                            <li id='yucs-top-autos'><a href="http://autos.yahoo.com/">Autos</a></li>                            <li id='yucs-top-homes'><a href="http://homes.yahoo.com/">Homes</a></li>                                               </ul>                    </div>                </div>            </li>        </ul>    </div></div><div id="yucs" class="yucs-mc  yog-grid" data-lang="en-us" data-property="finance" data-flight="1384078962" data-linktarget="_top" data-uhvc="/">        <div class="yucs-fl-left yog-cp">         <div id="yucs-logo">    <style>        #yucs #yucs-logo-ani {          width:120px ;          height:34px;          background-image:url(http://l.yimg.com/rz/l/yahoo_finance_en-US_f_pw_119x34.png) ;          _background-image:url(http://l.yimg.com/rz/l/yahoo_finance_en-US_f_pw_119x34.gif) ;          *left: 0px;          display:block ;          visibility:hidden;          clip: rect(23px,154px,42px,0px);         *clip: rect(23px 154px 42px 0px);         position: absolute;        }                .lt #yucs-logo-ani {        background-position: 100% 0px !important;        }                .lt #yucs[data-property='mail'] #yucs-logo-ani {        background-position: -350px 0px !important;        }                #yucs-logo {        margin-top:0px!important;        padding-top: 11px;        width: 120px;        }                #yucs[data-property='homes'] #yucs-logo {            width: 102px;        }                .advisor #yucs-link-ani {            left: 21px !important;        }        .advisor #yucs-search {            padding-left: 34px;        }        #yucs #yucs-logo a {margin-left: 0!important;}#yucs #yucs-link-ani {width: 100% !important;}        @media        only screen and (-webkit-min-device-pixel-ratio: 2),        only screen and ( min--moz-device-pixel-ratio: 2),        only screen and ( -o-min-device-pixel-ratio: 2/1),        only screen and ( min-device-pixel-ratio: 2),        only screen and ( min-resolution: 192dpi),        only screen and ( min-resolution: 2dppx) {         #yucs #yucs-logo-ani  {                background-image: url(http://l.yimg.com/rz/l/yahoo_finance_en-US_f_pw_119x34_2x.png) !important;                background-size: 232px 34px;            }            }        }    </style>        <div>        <a id="yucs-logo-ani" href="http://finance.yahoo.com"           target="_top" data-alg="">          Yahoo Finance        </a>    </div>     <img id="imageCheck" src="http://l.yimg.com/os/mit/media/m/base/images/transparent-95031.png" alt=""/>    </div><noscript><style>#yucs #yucs-logo-ani {visibility: visible;position: relative;clip: auto;}</style></noscript><script charset='utf-8' type='text/javascript' src='http://l.yimg.com/kx/yucs/uh3/uh/js/39/ai.min.js'></script><script>function isIE() {var myNav = navigator.userAgent.toLowerCase();return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;}function loadAnimAfterOnLoad() { if (typeof Aniden != 'undefined'&& Aniden.play&& (document.getElementById('yucs').getAttribute('data-property') !== 'mail' || document.getElementById('yucs-logo-ani').getAttribute('data-alg'))) {Aniden.play();}}if (isIE()) {var _animPltTimer = setTimeout(function() {this.loadAnimAfterOnLoad();}, 6000);} else if((navigator.userAgent.toLowerCase().indexOf('firefox') > -1)) {      var _animFireFoxTimer = setTimeout(function() {            this.loadAnimAfterOnLoad();        }, 2000);}else {document.addEventListener("Aniden.animReadyEvent", function() {loadAnimAfterOnLoad();},true);}</script>    <div id="yucs-search"  style="width: 570px; display: block;" class=' yucs-search-activate'>    <form role="search" class="yucs-search yucs-activate" target="_top"        data-webaction="http://search.yahoo.com/search"        action="http://finance.yahoo.com/q"        method="get">        <table role="presentation">            <tbody role="presentation">                <tr role="presentation">                    <td class="yucs-form-input" role="presentation">                        <input autocomplete="off" class="yucs-search-input" name="s" type="search"                            aria-describedby="mnp-search_box"                            data-yltvsearch="http://finance.yahoo.com/q"                            data-yltvsearchsugg="/"                            data-satype="mini"                            data-gosurl="http://d.yimg.com/aq/autoc"                            data-pubid="666"                            data-maxresults=""                            id="mnp-search_box"/>                    </td><td NOWRAP class="yucs-form-btn" role="presentation"><div id="yucs-prop_search_button_wrapper" class="yucs-search-buttons"><div class="yucs-shadow"><div class="yucs-gradient"></div></div><button id="yucs-sprop_button" class="yucs-action_btn yucs-button_theme yucs-vsearch-button" type="submit"                            data-vfr="uhb2" data-searchNews="uh3_finance_vert_gs"                            data-vsearch="http://finance.yahoo.com/q">Search Finance</button></div><div id="yucs-web_search_button_wrapper" class="yucs-search-buttons"><div class="yucs-shadow"><div class="yucs-gradient"></div></div><button id="yucs-search_button"                            class="yucs-action_btn yucs-wsearch-button"                            type="submit">Search Web</button></div></td></tr>            </tbody>    </table>    <input type="hidden" name="uhb" value="uhb2" data-searchNews="uh3_finance_vert_gs" />    <input type="hidden" name="type" value="2button" />    <input type="hidden" id="fr" name="fr" value="uh3_finance_web_gs" />            </form><div id="yucs-satray" class="sa-tray sa-hidden"    data-wstext="Search Web for: "    data-wsearch="http://search.yahoo.com/search"    data-vfr="uhb2" data-searchNews="uh3_finance_vert_gs"    data-vsearchAll="/"    data-vsearch="http://finance.yahoo.com/q"    data-vstext= "Search news for: "    data-vert_fin_search="http://finance.search.yahoo.com/search/"></div>    </div></div><div class="yucs-fl-right">  <div id="yucs-profile" class="yucs-profile yucs-signedout">    <a id="yucs-menu_link_profile_signed_out" href="https://login.yahoo.com/config/login?.src=quote&.intl=us&.lang=en-US&.done=http://finance.yahoo.com/lookup%3fs=A7Z.DE"  target="_top" rel="nofollow" class="sp yucs-fc" aria-label="Profile">    </a>    <div id="yucs-profile_text" class="yucs-fc">        <a id="yucs-login_signIn" href="https://login.yahoo.com/config/login?.src=quote&.intl=us&.lang=en-US&.done=http://finance.yahoo.com/lookup%3fs=A7Z.DE"  target="_top" rel="nofollow" class="yucs-fc">            Sign In        </a>    </div></div>  <div class="yucs-mail_link yucs-mailpreview-ancestor"><a id="yucs-mail_link_id" class="sp yltasis yucs-fc" href="http://mail.yahoo.com/?.intl=us&.lang=en-US" rel="nofollow" target="_top">    Mail    </a><div class="yucs-mail-preview-panel yucs-menu yucs-hide" data-mail-txt="Mail"    data-uri-scheme="http"     data-uri-path="ucs.query.yahoo.com/v1/console/yql"     data-mail-view="Go to Mail"    data-mail-help-txt="Help"    data-mail-help-url="http://help.yahoo.com/l/us/yahoo/mail/ymail/"    data-mail-loading-txt="Loading..."    data-languagetag="en-us"    data-mrd-crumb=""    data-authstate="signedout"    data-middleauth-signin-text="Click here to view your mail"    data-popup-login-url="https://login.yahoo.com/config/login_verify2?.pd=c%3DOIVaOGq62e5hAP8Tv..nr5E3&.src=sc"    data-middleauthtext="You have {count} new messages."    data-yltmessage-link="http://mrd.mail.yahoo.com/msg?mid={msgID}&fid=Inbox&src=uh&.crumb="    data-yltviewall-link="http://mail.yahoo.com/"    data-yltpanelshown="/"    data-ylterror="/"    data-ylttimeout="/"    data-generic-error="We're unable to preview your mail.<br>Go to Mail."    data-nosubject="[No Subject]"    data-timestamp='short'></div></div>    <div id="yucs-help" class="yucs-activate yucs-help yucs-menu_nav">    <a id="yucs-help_button" class="sp yltasis"         href="javascript:void(0);"        aria-label="Help" rel="nofollow">        <em class="yucs-hide yucs-menu_anchor">Help</em>    </a>    <div id="yucs-help_inner" class="yucs-hide yucs-menu yucs-hm-activate"          data-yltmenushown="/">        <span class="sp yucs-dock"></span>        <ul id="yuhead-help-panel">            <li><a class="yucs-acct-link" href="https://edit.yahoo.com/mc2.0/eval_profile?.intl=us&.lang=en-US&.done=http://finance.yahoo.com/lookup%3fs=A7Z.DE&amp;.src=quote&amp;.intl=us&amp;.lang=en-US" target="_top">Account Info</a></li>            <li><a href="http://help.yahoo.com/l/us/yahoo/finance/"                 rel="nofollow" >Help</a></li>            <span class="yucs-separator" role="presentation" style="display: block;"></span>            <li><a href="http://feedback.yahoo.com/forums/207809"                  rel="nofollow" >Suggestions</a></li>        </ul>    </div></div>    <div id="yucs-network_link"><a id="yucs-home_link" href="http://www.yahoo.com/" rel="nofollow" target="_top">Yahoo</a></div>        <div     id="yucs-bnews"     class="yucs-activate slide yucs-hide"     data-linktarget="_top"    data-authstate="signedout"     data-deflink="http://news.yahoo.com"    data-deflinktext="Visit Yahoo News for the latest."    data-title="Breaking News"    data-close="Close this window"    data-lang="en-us"     data-property="finance"></div>     </div>               </div> <!-- contextual_shortcuts --><div id="yucs-contextual_shortcuts"data-property="finance"data-languagetag="en-us"data-status="active"data-spaceid=""data-cobrand="standard"></div><!-- /contextual_shortcuts --><!-- property: finance | languagetag: en-us | status: active | spaceid:  | cobrand: standard | markup: standard --><div     id="yucs-location-js"    class="yucs-hide yucs-offscreen yucs-location-activate"    data-appid="yahoo.locdrop.ucs.desktop"    data-crumb=""><!-- empty for ie --></div><div id="yUnivHead" class="yucs-hide"><!-- empty --></div></div></div><script type="text/javascript">
-    var yfi_dd = "finance.yahoo.com";
-</script>
-
-<script>
-        if(typeof YAHOO == "undefined"){YAHOO={};}
-        if(typeof YAHOO.Finance == "undefined"){YAHOO.Finance={};}
-        if(typeof YAHOO.Finance.ComscoreConfig == "undefined"){YAHOO.Finance.ComscoreConfig={};}
-        YAHOO.Finance.ComscoreConfig={ "config" : [
-        {
-                c5: "2142000625",
-                c7: "http://finance.yahoo.com/lookup?s=A7Z.DE"
-        } ] }
-</script>
-
-<style> 
+    }</style><div id="yucsHead" class="yucs-finance yucs-en-us "><div id="yucs-top-bar" class='yucs-ps'>    <div id='yucs-top-inner'>        <ul id='yucs-top-list'>            <li id='yucs-top-home'><a href="http://www.yahoo.com/"><span class="sp yucs-top-ico"></span>Home</a></li>            <li id='yucs-top-mail'><a href="http://mail.yahoo.com/">Mail</a></li>            <li id='yucs-top-news'><a href="http://news.yahoo.com/">News</a></li>            <li id='yucs-top-sports'><a href="http://sports.yahoo.com/">Sports</a></li>            <li id='yucs-top-finance'><a href="http://finance.yahoo.com/">Finance</a></li>            <li id='yucs-top-weather'><a href="http://weather.yahoo.com/"">Weather</a></li>            <li id='yucs-top-games'><a href="http://games.yahoo.com/">Games</a></li>            <li id='yucs-top-groups'><a href="http://groups.yahoo.com/">Groups</a></li>            <li id='yucs-top-answers'><a href="http://answers.yahoo.com/">Answers</a></li>            <li id='yucs-top-screen'><a href="http://screen.yahoo.com/">Screen</a></li>            <li id='yucs-top-flickr'><a href="http://www.flickr.com/">Flickr</a></li>            <li id='yucs-top-mobile'><a href="http://mobile.yahoo.com/">Mobile</a></li>            <li id='yucs-more' class='yucs-menu yucs-more-activate' data-ylt="/"><a href="javascript:void(0);" id='yucs-more-link' class='yucs-leavable'>More<span class="sp yucs-top-ico"></span></a>                <div id='yucs-top-menu'>                    <div class='yui3-menu-content'>                        <ul class='yucs-hide yucs-leavable'>                            <li id='yucs-top-omg'><a href="http://omg.yahoo.com/">omg!</a></li>                            <li id='yucs-top-shine'><a href="http://shine.yahoo.com/">Shine</a></li>                            <li id='yucs-top-movies'><a href="http://movies.yahoo.com/">Movies</a></li>                            <li id='yucs-top-music'><a href="http://music.yahoo.com/">Music</a></li>                            <li id='yucs-top-tv'><a href="http://tv.yahoo.com/">TV</a></li>                            <li id='yucs-top-health'><a href="http://health.yahoo.com/">Health</a></li>                            <li id='yucs-top-shopping'><a href="http://shopping.yahoo.com/">Shopping</a></li>                            <li id='yucs-top-travel'><a href="http://travel.yahoo.com/">Travel</a></li>                            <li id='yucs-top-autos'><a href="http://autos.yahoo.com/">Autos</a></li>                            <li id='yucs-top-homes'><a href="http://homes.yahoo.com/">Homes</a></li>                                               </ul>                    </div>                </div>            </li>        </ul>    </div></div><div id="yucs" class="yucs-mc  yog-grid" data-lang="en-us" data-property="finance" data-flight="1384079557" data-linktarget="_top" data-uhvc="/">        <div class="yucs-fl-left yog-cp">         <div id="yucs-logo">    <style>        #yucs #yucs-logo-ani {          width:120px ;          height:34px;          background-image:url(http://l.yimg.com/rz/l/yahoo_finance_en-US_f_pw_119x34.png) ;          _background-image:url(http://l.yimg.com/rz/l/yahoo_finance_en-US_f_pw_119x34.gif) ;          *left: 0px;          display:block ;          visibility:hidden;          clip: rect(23px,154px,42px,0px);         *clip: rect(23px 154px 42px 0px);         position: absolute;        }                .lt #yucs-logo-ani {        background-position: 100% 0px !important;        }                .lt #yucs[data-property='mail'] #yucs-logo-ani {        background-position: -350px 0px !important;        }                #yucs-logo {        margin-top:0px!important;        padding-top: 11px;        width: 120px;        }                #yucs[data-property='homes'] #yucs-logo {            width: 102px;        }                .advisor #yucs-link-ani {            left: 21px !important;        }        .advisor #yucs-search {            padding-left: 34px;        }        #yucs #yucs-logo a {margin-left: 0!important;}#yucs #yucs-link-ani {width: 100% !important;}        @media        only screen and (-webkit-min-device-pixel-ratio: 2),        only screen and ( min--moz-device-pixel-ratio: 2),        only screen and ( -o-min-device-pixel-ratio: 2/1),        only screen and ( min-device-pixel-ratio: 2),        only screen and ( min-resolution: 192dpi),        only screen and ( min-resolution: 2dppx) {         #yucs #yucs-logo-ani  {                background-image: url(http://l.yimg.com/rz/l/yahoo_finance_en-US_f_pw_119x34_2x.png) !important;                background-size: 232px 34px;            }            }        }    </style>        <div>        <a id="yucs-logo-ani" href="http://finance.yahoo.com"           target="_top" data-alg="">          Yahoo Finance        </a>    </div>     <img id="imageCheck" src="http://l.yimg.com/os/mit/media/m/base/images/transparent-95031.png" alt=""/>    </div><noscript><style>#yucs #yucs-logo-ani {visibility: visible;position: relative;clip: auto;}</style></noscript><script charset='utf-8' type='text/javascript' src='http://l.yimg.com/kx/yucs/uh3/uh/js/39/ai.min.js'></script><script>function isIE() {var myNav = navigator.userAgent.toLowerCase();return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;}function loadAnimAfterOnLoad() { if (typeof Aniden != 'undefined'&& Aniden.play&& (document.getElementById('yucs').getAttribute('data-property') !== 'mail' || document.getElementById('yucs-logo-ani').getAttribute('data-alg'))) {Aniden.play();}}if (isIE()) {var _animPltTimer = setTimeout(function() {this.loadAnimAfterOnLoad();}, 6000);} else if((navigator.userAgent.toLowerCase().indexOf('firefox') > -1)) {      var _animFireFoxTimer = setTimeout(function() {            this.loadAnimAfterOnLoad();        }, 2000);}else {document.addEventListener("Aniden.animReadyEvent", function() {loadAnimAfterOnLoad();},true);}</script>    <div id="yucs-search"  style="width: 570px; display: block;" class=' yucs-search-activate'>    <form role="search" class="yucs-search yucs-activate" target="_top"        data-webaction="http://search.yahoo.com/search"        action="http://finance.yahoo.com/q"        method="get">        <table role="presentation">            <tbody role="presentation">                <tr role="presentation">                    <td class="yucs-form-input" role="presentation">                        <input autocomplete="off" class="yucs-search-input" name="s" type="search"                            aria-describedby="mnp-search_box"                            data-yltvsearch="http://finance.yahoo.com/q"                            data-yltvsearchsugg="/"                            data-satype="mini"                            data-gosurl="http://d.yimg.com/aq/autoc"                            data-pubid="666"                            data-maxresults=""                            id="mnp-search_box"/>                    </td><td NOWRAP class="yucs-form-btn" role="presentation"><div id="yucs-prop_search_button_wrapper" class="yucs-search-buttons"><div class="yucs-shadow"><div class="yucs-gradient"></div></div><button id="yucs-sprop_button" class="yucs-action_btn yucs-button_theme yucs-vsearch-button" type="submit"                            data-vfr="uhb2" data-searchNews="uh3_finance_vert_gs"                            data-vsearch="http://finance.yahoo.com/q">Search Finance</button></div><div id="yucs-web_search_button_wrapper" class="yucs-search-buttons"><div class="yucs-shadow"><div class="yucs-gradient"></div></div><button id="yucs-search_button"                            class="yucs-action_btn yucs-wsearch-button"                            type="submit">Search Web</button></div></td></tr>            </tbody>    </table>    <input type="hidden" name="uhb" value="uhb2" data-searchNews="uh3_finance_vert_gs" />    <input type="hidden" name="type" value="2button" />    <input type="hidden" id="fr" name="fr" value="uh3_finance_web_gs" />            </form><div id="yucs-satray" class="sa-tray sa-hidden"    data-wstext="Search Web for: "    data-wsearch="http://search.yahoo.com/search"    data-vfr="uhb2" data-searchNews="uh3_finance_vert_gs"    data-vsearchAll="/"    data-vsearch="http://finance.yahoo.com/q"    data-vstext= "Search news for: "    data-vert_fin_search="http://finance.search.yahoo.com/search/"></div>    </div></div><div class="yucs-fl-right">  <div id="yucs-profile" class="yucs-profile yucs-signedout">    <a id="yucs-menu_link_profile_signed_out" href="https://login.yahoo.com/config/login?.src=quote&.intl=us&.lang=en-US&.done=http://finance.yahoo.com/q/pr%3fs=ASTEC.BO"  target="_top" rel="nofollow" class="sp yucs-fc" aria-label="Profile">    </a>    <div id="yucs-profile_text" class="yucs-fc">        <a id="yucs-login_signIn" href="https://login.yahoo.com/config/login?.src=quote&.intl=us&.lang=en-US&.done=http://finance.yahoo.com/q/pr%3fs=ASTEC.BO"  target="_top" rel="nofollow" class="yucs-fc">            Sign In        </a>    </div></div>  <div class="yucs-mail_link yucs-mailpreview-ancestor"><a id="yucs-mail_link_id" class="sp yltasis yucs-fc" href="http://mail.yahoo.com/?.intl=us&.lang=en-US" rel="nofollow" target="_top">    Mail    </a><div class="yucs-mail-preview-panel yucs-menu yucs-hide" data-mail-txt="Mail"    data-uri-scheme="http"     data-uri-path="ucs.query.yahoo.com/v1/console/yql"     data-mail-view="Go to Mail"    data-mail-help-txt="Help"    data-mail-help-url="http://help.yahoo.com/l/us/yahoo/mail/ymail/"    data-mail-loading-txt="Loading..."    data-languagetag="en-us"    data-mrd-crumb=""    data-authstate="signedout"    data-middleauth-signin-text="Click here to view your mail"    data-popup-login-url="https://login.yahoo.com/config/login_verify2?.pd=c%3DOIVaOGq62e5hAP8Tv..nr5E3&.src=sc"    data-middleauthtext="You have {count} new messages."    data-yltmessage-link="http://mrd.mail.yahoo.com/msg?mid={msgID}&fid=Inbox&src=uh&.crumb="    data-yltviewall-link="http://mail.yahoo.com/"    data-yltpanelshown="/"    data-ylterror="/"    data-ylttimeout="/"    data-generic-error="We're unable to preview your mail.<br>Go to Mail."    data-nosubject="[No Subject]"    data-timestamp='short'></div></div>    <div id="yucs-help" class="yucs-activate yucs-help yucs-menu_nav">    <a id="yucs-help_button" class="sp yltasis"         href="javascript:void(0);"        aria-label="Help" rel="nofollow">        <em class="yucs-hide yucs-menu_anchor">Help</em>    </a>    <div id="yucs-help_inner" class="yucs-hide yucs-menu yucs-hm-activate"          data-yltmenushown="/">        <span class="sp yucs-dock"></span>        <ul id="yuhead-help-panel">            <li><a class="yucs-acct-link" href="https://edit.yahoo.com/mc2.0/eval_profile?.intl=us&.lang=en-US&.done=http://finance.yahoo.com/q/pr%3fs=ASTEC.BO&amp;.src=quote&amp;.intl=us&amp;.lang=en-US" target="_top">Account Info</a></li>            <li><a href="http://help.yahoo.com/l/us/yahoo/finance/"                 rel="nofollow" >Help</a></li>            <span class="yucs-separator" role="presentation" style="display: block;"></span>            <li><a href="http://feedback.yahoo.com/forums/207809"                  rel="nofollow" >Suggestions</a></li>        </ul>    </div></div>    <div id="yucs-network_link"><a id="yucs-home_link" href="http://www.yahoo.com/" rel="nofollow" target="_top">Yahoo</a></div>        <div     id="yucs-bnews"     class="yucs-activate slide yucs-hide"     data-linktarget="_top"    data-authstate="signedout"     data-deflink="http://news.yahoo.com"    data-deflinktext="Visit Yahoo News for the latest."    data-title="Breaking News"    data-close="Close this window"    data-lang="en-us"     data-property="finance"></div>     </div>               </div> <!-- contextual_shortcuts --><div id="yucs-contextual_shortcuts"data-property="finance"data-languagetag="en-us"data-status="active"data-spaceid=""data-cobrand="standard"></div><!-- /contextual_shortcuts --><!-- property: finance | languagetag: en-us | status: active | spaceid:  | cobrand: standard | markup: standard --><div     id="yucs-location-js"    class="yucs-hide yucs-offscreen yucs-location-activate"    data-appid="yahoo.locdrop.ucs.desktop"    data-crumb=""><!-- empty for ie --></div><div id="yUnivHead" class="yucs-hide"><!-- empty --></div></div></div><script type="text/javascript">
+		var yfi_dd = 'finance.yahoo.com';
+		ll_js = new Array();
+		
+			ll_js.push({
+			'file':'http://l.yimg.com/zz/combo?kx/yucs/uh3/uh/js/771/uh-min.js&kx/yucs/uh3/uh/js/102/gallery-jsonp-min.js&kx/yucs/uh3/uh/js/771/menu_utils_v3-min.js&kx/yucs/uh3/uh/js/822/timestamp_library-min.js&kx/yucs/uh3/uh/js/829/logo_debug-min.js&kx/yucs/uh3/uh3_top_bar/js/259/top_bar_v3-min.js&kx/yucs/uh3/search/js/457/search-min.js&kx/ucs/common/js/131/jsonp-super-cached-min.js&kx/yucs/uh3/avatar/js/25/avatar-min.js&kx/yucs/uh3/mail_link/js/70/mailcount-min.js&kx/yucs/uh3/help/js/53/help_menu_v3-min.js&kx/ucs/common/js/131/jsonp-cached-min.js&kx/yucs/uh3/breakingnews/js/5/breaking_news-min.js&kx/yucs/uh3/uh3_contextual_shortcuts/js/55/shortcuts-bootstrap.js&kx/yucs/uh3/location/js/7/uh_locdrop-min.js'
+			});
+		</script><style>
         @media screen and (min-width: 806px) {
                 html {
                     padding-top:83px !important;
                 }
         }
-</style>
-<script type="text/javascript">
-YUI().use('node',function(Y){
-    var gs_hdr_elem = Y.one('.yfin_gs #yog-hd');
-    var _window = Y.one('window');
+        </style><script type="text/javascript">
+	YUI().use('node',function(Y){
+	    var gs_hdr_elem = Y.one('.yfin_gs #yog-hd');
+	    var _window = Y.one('window');
+	    
+	    if(gs_hdr_elem) {
+		_window.on('scroll', function() {
+		    var scrollTop   = _window.get('scrollTop');
 
-    if(gs_hdr_elem) {
-	_window.on('scroll', function() {
-	    var scrollTop   = _window.get('scrollTop');
-
-	    if (scrollTop === 0 ) {
-		gs_hdr_elem.removeClass('yog-hd-border');
-	    }
-	    else {
-		gs_hdr_elem.addClass('yog-hd-border');
+		    if (scrollTop === 0 ) {
+			gs_hdr_elem.removeClass('yog-hd-border');
+		    }
+		    else {
+			gs_hdr_elem.addClass('yog-hd-border');
+		    }
+		});
 	    }
 	});
-    }
-});
-</script>
-
-            </div>
-	    <div class="ad_in_head">	
-		<div class="yfi_doc">
-                <!-- SpaceID=0 robot -->
-
-		</div>
-	    </div>
-            <div id="yfi_nav_header">
-                <div id="navigation" class="yom-mod yom-nav" role="navigation"><div class="bd"><div class="nav">
-<div class="y-nav-pri-legobg"><div id="y-nav-pri" class="nav-stack nav-0 yfi_doc"><ul class="yog-grid" id="y-main-nav">
-<li id="finance%2520home"><a href="/"><span>Finance Home</span></a></li>
-<li xmlns:strings="http://exslt.org/strings" class="nav-fin-portfolios">
-<a id="yfmya" href="/portfolios.html"><span>My Portfolio</span></a><div class="arrow"><em></em></div>
-<div class="pointer"></div>
-<ul class="nav-sub">
-<li><a href="/portfolios/">Sign in to access My Portfolios</a></li>
-<li><a href="http://billing.finance.yahoo.com/realtime_quotes/signup?.src=quote&amp;.refer=nb">Free trial of Real-Time Quotes</a></li>
-</ul>
-</li>
-<li id="markets">
-<a href="/market-overview/"><span>Markets</span></a><div class="arrow"><em></em></div>
-<div class="pointer"></div>
-<ul class="nav-sub">
-<li><a href="/investing-news/">Market News</a></li>
-<li><a href="/funds/">Mutual Funds</a></li>
-<li><a href="/options/">Options</a></li>
-<li><a href="/etf/">ETFs</a></li>
-<li><a href="/bonds">Bonds</a></li>
-<li><a href="/futures">Commodities</a></li>
-<li><a href="/currency-investing">Currencies</a></li>
-</ul>
-</li>
-<li id="company%2520news"><a href="/corporate-news/"><span>Company News</span></a></li>
-<li id="economic%2520news"><a href="/economic-policy-news/"><span>Economic News</span></a></li>
-<li id="personal%2520finance">
-<a href="/personal-finance/"><span>Personal Finance</span></a><div class="arrow"><em></em></div>
-<div class="pointer"></div>
-<ul class="nav-sub">
-<li><a href="/career-education/">Career & Education</a></li>
-<li><a href="/real-estate/">Real Estate</a></li>
-<li><a href="/retirement/">Retirement</a></li>
-<li><a href="/credit-debt/">Credit & Debt</a></li>
-<li><a href="/taxes/">Taxes</a></li>
-<li><a href="/autos/">Autos</a></li>
-<li><a href="/lifestyle/">Health & Lifestyle</a></li>
-<li><a href="/rates/">Rates in Your Area</a></li>
-<li><a href="/calculator/index/">Calculators</a></li>
-</ul>
-</li>
-<li id="yahoo%2520originals">
-<a href="/blogs/"><span>Yahoo Originals</span></a><div class="arrow"><em></em></div>
-<div class="pointer"></div>
-<ul class="nav-sub">
-<li><a href="/blogs/breakout/">Breakout</a></li>
-<li><a href="/blogs/daily-ticker/">The Daily Ticker</a></li>
-<li><a href="/blogs/michael-santoli/">Unexpected Returns</a></li>
-<li><a href="/blogs/the-exchange/">The Exchange</a></li>
-<li><a href="/video/playlist/financially-fit">Financially Fit</a></li>
-<li><a href="/blogs/just-explain-it/">Just Explain It</a></li>
-<li><a href="/blogs/hot-stock-minute/">Hot Stock Minute</a></li>
-<li><a href="/topics/destination-home/">Destination Home</a></li>
-<li><a href="/blogs/cost-of-living/">Cost of Living</a></li>
-</ul>
-</li>
-<li id="cnbc">
-<a href="/cnbc/"><span>CNBC</span></a><div class="arrow"><em></em></div>
-<div class="pointer"></div>
-<ul class="nav-sub">
-<li><a href="/blogs/big-data-download/">Big Data Download</a></li>
-<li><a href="/blogs/off-the-cuff/">Off the Cuff</a></li>
-<li><a href="/blogs/power-pitch/">Power Pitch</a></li>
-<li><a href="/blogs/talking-numbers/">Talking Numbers</a></li>
-</ul>
-</li>
-</ul></div></div>     </div></div></div>
-
-            </div>
-            <script>
+	</script><script type="text/javascript">
+                if(typeof YAHOO == "undefined"){YAHOO={};}
+                if(typeof YAHOO.Finance == "undefined"){YAHOO.Finance={};}
+                if(typeof YAHOO.Finance.ComscoreConfig == "undefined"){YAHOO.Finance.ComscoreConfig={};}
+                YAHOO.Finance.ComscoreConfig={ "config" : [
+                        {
+                        c5: "95941563",
+                        c7: "http://finance.yahoo.com/q/pr?s=ASTEC.BO"
+                        }
+                ] }
+                ll_js.push({
+                            'file': 'http://l1.yimg.com/bm/lib/fi/common/p/d/static/js/2.0.298290/2.0.0/yfi_comscore.js'
+                });
+        </script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=7241469&amp;c4=http://finance.yahoo.com/q/pr?s=ASTEC.BO&amp;c5=95941563&amp;cv=2.0&amp;cj=1"></noscript></div></div><div class="ad_in_head"><div class="yfi_doc"></div><table width="752" id="yfncmkttme" cellpadding="0" cellspacing="0" border="0"><tr><td></td></tr></table></div><div id="y-nav"><div id="navigation" class="yom-mod yom-nav" role="navigation"><div class="bd"><div class="nav"><div class="y-nav-pri-legobg"><div id="y-nav-pri" class="nav-stack nav-0 yfi_doc"><ul class="yog-grid" id="y-main-nav"><li id="finance%2520home"><a href="/"><span>Finance Home</span></a></li><li class="nav-fin-portfolios"><a id="yfmya" href="/portfolios.html"><span>My Portfolio</span></a><div class="arrow"><em></em></div><div class="pointer"></div><ul class="nav-sub"><li><a href="/portfolios/">Sign in to access My Portfolios</a></li><li><a href="http://billing.finance.yahoo.com/realtime_quotes/signup?.src=quote&amp;.refer=nb">Free trial of Real-Time Quotes</a></li></ul></li><li id="markets"><a href="/market-overview/"><span>Markets</span></a><div class="arrow"><em></em></div><div class="pointer"></div><ul class="nav-sub"><li><a href="/investing-news/">Market News</a></li><li><a href="/funds/">Mutual Funds</a></li><li><a href="/options/">Options</a></li><li><a href="/etf/">ETFs</a></li><li><a href="/bonds">Bonds</a></li><li><a href="/futures">Commodities</a></li><li><a href="/currency-investing">Currencies</a></li></ul></li><li id="company%2520news"><a href="/corporate-news/"><span>Company News</span></a></li><li id="economic%2520news"><a href="/economic-policy-news/"><span>Economic News</span></a></li><li id="personal%2520finance"><a href="/personal-finance/"><span>Personal Finance</span></a><div class="arrow"><em></em></div><div class="pointer"></div><ul class="nav-sub"><li><a href="/career-education/">Career & Education</a></li><li><a href="/real-estate/">Real Estate</a></li><li><a href="/retirement/">Retirement</a></li><li><a href="/credit-debt/">Credit & Debt</a></li><li><a href="/taxes/">Taxes</a></li><li><a href="/autos/">Autos</a></li><li><a href="/lifestyle/">Health & Lifestyle</a></li><li><a href="/rates/">Rates in Your Area</a></li><li><a href="/calculator/index/">Calculators</a></li></ul></li><li id="yahoo%2520originals"><a href="/blogs/"><span>Yahoo Originals</span></a><div class="arrow"><em></em></div><div class="pointer"></div><ul class="nav-sub"><li><a href="/blogs/breakout/">Breakout</a></li><li><a href="/blogs/daily-ticker/">The Daily Ticker</a></li><li><a href="/blogs/michael-santoli/">Unexpected Returns</a></li><li><a href="/blogs/the-exchange/">The Exchange</a></li><li><a href="/video/playlist/financially-fit">Financially Fit</a></li><li><a href="/blogs/just-explain-it/">Just Explain It</a></li><li><a href="/blogs/hot-stock-minute/">Hot Stock Minute</a></li><li><a href="/topics/destination-home/">Destination Home</a></li><li><a href="/blogs/cost-of-living/">Cost of Living</a></li></ul></li><li id="cnbc"><a href="/cnbc/"><span>CNBC</span></a><div class="arrow"><em></em></div><div class="pointer"></div><ul class="nav-sub"><li><a href="/blogs/big-data-download/">Big Data Download</a></li><li><a href="/blogs/off-the-cuff/">Off the Cuff</a></li><li><a href="/blogs/power-pitch/">Power Pitch</a></li><li><a href="/blogs/talking-numbers/">Talking Numbers</a></li></ul></li></ul></div></div>     </div></div></div><script>
         
         (function(el) {
             function focusHandler(e){
@@ -178,173 +127,69 @@ YUI().use('node',function(Y){
             }
         })(document);
         
-        </script><div class="y-nav-legobg"><div class="yfi_doc"><div id="y-nav-sec" class="clear"><div id="searchQuotes" class="ticker-search mod" mode="search">
-<div class="hd"></div>
-<div class="bd"><form id="quote" name="quote" action="/q">
-<h2 class="yfi_signpost">Search for share prices</h2>
-<label for="txtQuotes">Search for share prices</label><input id="txtQuotes" name="s" value="" type="text" autocomplete="off" placeholder="Enter Symbol"><input id="get_quote_logic_opt" name="ql" value="1" type="hidden" autocomplete="off"><div id="yfi_quotes_submit"><span><span><span><input type="submit" value="Look Up" id="btnQuotes" class="rapid-nf"></span></span></span></div>
-</form></div>
-<div class="ft">
-<a href="http://finance.search.yahoo.com?fr=fin-v1">Finance Search</a><p><span id="yfs_market_time">Sun, Nov 10, 2013, 5:22AM EST - U.S. Markets closed</span></p>
-</div>
-</div></div></div></div>
+        </script><div class="y-nav-legobg"><div class="yfi_doc"><div id="y-nav-sec" class="clear"><div id="searchQuotes" class="ticker-search mod" mode="search"><div class="hd"></div><div class="bd"><form id="quote" name="quote" action="/q"><h2 class="yfi_signpost">Search for share prices</h2><label for="txtQuotes">Search for share prices</label><input id="txtQuotes" name="s" value="" type="text" autocomplete="off" placeholder="Enter Symbol"><input id="get_quote_logic_opt" name="ql" value="1" type="hidden" autocomplete="off"><div id="yfi_quotes_submit"><span><span><span><input type="submit" value="Look Up" id="btnQuotes" class="rapid-nf"></span></span></span></div></form></div><div class="ft"><a href="http://finance.search.yahoo.com?fr=fin-v1">Finance Search</a><p><span id="yfs_market_time">Sun, Nov 10, 2013, 5:32AM EST - U.S. Markets closed</span></p></div></div></div></div></div></div><div id="screen"><span id="yfs_ad_" ></span><style type="text/css">
+     .yfi-price-change-up{
+        color:#008800
+     }
+     
+    .yfi-price-change-down{
+        color:#cc0000
+    }
+    </style><div id="marketindices">&nbsp;<a href="/q?s=%5EDJI">Dow</a>&nbsp;<span id="yfs_pp0_^dji"><img width="10" height="14" style="margin-right:-2px;" border="0" src="http://l.yimg.com/os/mit/media/m/base/images/transparent-1093278.png" class="pos_arrow" alt="Up"><b style="color:#008800;">1.08%</b></span>&nbsp;<a href="/q?s=%5EIXIC">Nasdaq</a>&nbsp;<span id="yfs_pp0_^ixic"><img width="10" height="14" style="margin-right:-2px;" border="0" src="http://l.yimg.com/os/mit/media/m/base/images/transparent-1093278.png" class="neg_arrow" alt="Down"><b style="color:#cc0000;">0.03%</b></span></div><div id="companynav"><table cellpadding="0" cellspacing="0" border="0"><tr><td height="5"></td></tr></table></div><div id="leftcol"><div id="yfi_investing_nav"><div class="hd"><h2>More On ASTEC.BO</h2></div><div class="bd"><h3>Quotes</h3><ul><li><a href="/q?s=ASTEC.BO">Summary</a></li><li class="deselected">Order Book</li><li class="deselected">Options</li><li><a href="/q/hp?s=ASTEC.BO+Historical+Prices">Historical Prices</a></li></ul><h3>Charts</h3><ul><li><a href="/echarts?s=ASTEC.BO+Interactive#symbol=ASTEC.BO;range=">Interactive</a></li><li><a href="/q/bc?s=ASTEC.BO+Basic+Chart">Basic Chart</a></li><li><a href="/q/ta?s=ASTEC.BO+Basic+Tech.+Analysis">Basic Tech. Analysis</a></li></ul><h3>News &amp; Info</h3><ul><li class="deselected">Headlines</li><li><a href="/q/p?s=ASTEC.BO+Press+Releases">Press Releases</a></li><li class="deselected">Company Events</li><li class="deselected">Message Boards</li></ul><h3>Company</h3><ul><li class="selected">Profile</li><li><a href="/q/ks?s=ASTEC.BO+Key+Statistics">Key Statistics</a></li><li class="deselected">SEC Filings</li><li class="deselected">Competitors</li><li><a href="/q/in?s=ASTEC.BO+Industry">Industry</a></li><li class="deselected">Components</li></ul><h3>Analyst Coverage</h3><ul><li class="deselected">Analyst Opinion</li><li class="deselected">Analyst Estimates</li><li class="deselected">Research Reports</li></ul><h3>Ownership</h3><ul><li class="deselected">Major Holders</li><li class="deselected">Insider Transactions</li><li class="deselected">Insider Roster</li></ul><h3>Financials</h3><ul><li><a href="/q/is?s=ASTEC.BO+Income+Statement&amp;annual">Income Statement</a></li><li><a href="/q/bs?s=ASTEC.BO+Balance+Sheet&amp;annual">Balance Sheet</a></li><li><a href="/q/cf?s=ASTEC.BO+Cash+Flow&amp;annual">Cash Flow</a></li></ul></div><div class="ft"></div></div></div><div id="rightcol"><table border="0" cellspacing="0" cellpadding="0" width="580" id="yfncbrobtn" style="padding-top:1px;"><tr><td align="center"><!-- SpaceID=0 robot -->
+</td></tr></table><br><div class="rtq_leaf"><div class="rtq_div"><div class="yui-g"><div class="yfi_rt_quote_summary" id="yfi_rt_quote_summary"><div class="hd"><div class="title"><h2>Astec LifeSciences Limited (ASTEC.BO)</h2> <span class="rtq_exch"><span class="rtq_dash">-</span>BSE  </span><span class="wl_sign"></span></div></div><div class="yfi_rt_quote_summary_rt_top"><p> <span class="time_rtq_ticker"><span id="yfs_l84_astec.bo">28.00</span></span> <span class=" time_rtq_content"><span id="yfs_c63_astec.bo">   0.00</span><span id="yfs_p43_astec.bo">(0.00%)</span> </span><span class="time_rtq"> <span id="yfs_t53_astec.bo">Nov 8, 4:46AM EST</span></span></p></div><div id="yfi_toolbox_mini_rtq"><span class="fb-like-button"></span><script type="text/javascript">
+                            ll_js.push({
+                                'script':function(){
+                                    YUI().use('node', function (Y) {
+                                        var iframe = Y.Node.create('<iframe src="http://www.facebook.com/plugins/like.php?href=http://finance.yahoo.com%2Fq%3Fs%3DASTEC.BO&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&amp;width=100&amp;locale=en_US" scrolling="no" frameborder="0" allowTransparency="true" style="height:21px; width:95px;"></iframe>');
+                                        Y.one(".fb-like-button").append(iframe);
+                                    });
+                                }
+                            });
+                        </script><span class="add-to-portfolio-button"><a class="add-to-portfolio-icon" href="http://edit.finance.yahoo.com/ec?.src=quote&amp;.intl=us&amp;.sym=ASTEC.BO&amp;.done=http%3A%2F%2Ffinance.yahoo.com%2Fq%2Fpr%3Fs%3DASTEC.BO"><span>Add to Portfolio</span></a></span></div></div></div></div></div><table width="580" id="yfncsumtab" cellpadding="0" cellspacing="0" border="0"><tr><td colspan="3"><table border="0" cellspacing="0" class="yfnc_modtitle1" style="border-bottom:1px solid #dcdcdc; margin-bottom:10px; width:100%;"><form action="/q/pr" accept-charset="utf-8"><tr><td><big><b>Profile</b></big></td><td align="right"><small><b>Get Profile for:</b> <input name="s" id="pageTicker" size="10" /></small><input id="get_quote_logic_opt" name="ql" value="1" type="hidden" autocomplete="off"><input value="GO" type="submit" style="margin-left:3px;" class="rapid-nf"></td></tr></form></table></td></tr><tr valign="top"><td width="270" class="yfnc_modtitlew1"><b>Astec LifeSciences Limited</b><br>Elite Square<br>7th Floor<br>Mumbai, 
+         400001<br>India - <a href="http://us.rd.yahoo.com/finance/profile/map/*http://maps.yahoo.com/maps_result?addr=Elite%20Square%207th%20Floor&amp;csz=Mumbai%20%20400001&amp;country=India">Map</a><br>Phone: 91 22 2261 8212<br>Fax: 91 22 2261 8289<br>Website:  <a href="http://www.astecls.com">http://www.astecls.com</a><br><br><table width="100%" class="yfnc_mod_table_title1" cellpadding="2" cellspacing="0" border="0"><tr><th align="left"><span class="yfi-module-title">Details</span></th><th align="right">&nbsp;</th></tr></table><table class="yfnc_datamodoutline1" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table border="0" cellpadding="2" cellspacing="1" width="100%"><tr><td class="yfnc_tablehead1" width="50%">Index Membership:</td><td class="yfnc_tabledata1">N/A</td></tr><tr><td class="yfnc_tablehead1" width="50%">Sector:</td><td class="yfnc_tabledata1"><a href="http://biz.yahoo.com/p/1conameu.html">Basic Materials</a></td></tr><tr><td class="yfnc_tablehead1" width="50%">Industry:</td><td class="yfnc_tabledata1"><a href="http://biz.yahoo.com/ic/110.html">Chemicals - Major Diversified</a></td></tr><tr><td class="yfnc_tablehead1" width="50%">Full Time Employees:</td><td class="yfnc_tabledata1">N/A</td></tr></table></td></tr></table><br><table width="100%" class="yfnc_modtitle1" cellpadding="2" cellspacing="0" border="0"><tr><th align="left"><span class="yfi-module-title">Business Summary</span></th><th align="right">&nbsp;</th></tr></table><p>Astec LifeSciences Limited manufactures, sells, and exports agrochemicals and pharmaceutical intermediates in India. The company offers agrochemicals, such as tebuconazole, propiconazole, hexaconazole, difenoconazole, epoxiconazole, cyproconazole, flutriafol, tricyclazole, metalaxyl, lambda cyhalothrin, and imazethapyr; and pharmaceutical intermediates, including 2,4 dichloro acetophenone, 2-chloro and 4-fluoro acetophenone, 4-methyl phthalic anhydride, thio bis-4-chloro thymol, and 1,2-pentanediol. It also serves customers in the United States, Japan, Europe, and Asia. Astec LifeSciences Limited was founded in 1994 and is based in Mumbai, India.</p><p><a href="/q/ks?s=ASTEC.BO"><b>Key Statistics</b></a></p><br><table width="100%" class="yfnc_modtitle1" cellpadding="2" cellspacing="0" border="0"><tr><th align="left"><span class="yfi-module-title">Company Websites</span></th><th align="right">&nbsp;</th></tr></table><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><a href="http://www.astecls.com">Home Page</a></td></tr><tr><td align="left" style="padding-top:10px;"><small>Search Yahoo! for: </small><br><a href="http://finance.search.yahoo.com/search?fr=fin-v1&amp;p=ASTEC.BO">More on Astec LifeSciences Limited</a></td></tr></table></td><td><span style="display:block; width:15px; height:2px;"></span></td><td width="270" class="yfnc_modtitlew2" align="center"><!-- SpaceID=0 robot -->
+<span id="yfs_ad_" ></span><span id="yfs_ad_" ></span><br><!-- SpaceID=0 robot -->
+<table width="100%" class="yfnc_modtitle1" cellpadding="2" cellspacing="0" border="0"><tr><th align="left"><span class="yfi-module-title">Key Executives</span></th><th align="right">&nbsp;</th></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="yfnc_datamodoutline1"><tr><td><table width="100%" cellpadding="2" cellspacing="1" border="0"><tr><td class="yfnc_tablehead1">&nbsp;</td><td class="yfnc_tablehead1">Pay</td><td class="yfnc_tablehead1">Exercised</td></tr><tr><td class="yfnc_tabledata1"><b>Mr. Ashok V. Hiremath </b>, 
+                                            58<br><small>Chairman and Managing Director</small></td><td class="yfnc_tabledata1" nowrap>4.80M</td><td class="yfnc_tabledata1" nowrap>N/A</td></tr><tr><td class="yfnc_tabledata1"><b>Mr. Janak Jaganath Rawal </b>, 
+                                            <br><small>Whole Time Director</small></td><td class="yfnc_tabledata1" nowrap>944.00K</td><td class="yfnc_tabledata1" nowrap>N/A</td></tr><tr><td class="yfnc_tabledata1"><b>Mr. Ravindra  Inani </b>, 
+                                            <br><small>Chief Financial Officer</small></td><td class="yfnc_tabledata1" nowrap>N/A</td><td class="yfnc_tabledata1" nowrap>N/A</td></tr><tr><td class="yfnc_tabledata1"><b>Mr. D. K. Joshi </b>, 
+                                            59<br><small>VP of Operations</small></td><td class="yfnc_tabledata1" nowrap>N/A</td><td class="yfnc_tabledata1" nowrap>N/A</td></tr><tr><td class="yfnc_tabledata1"><b>Ms. Tejal  Jariwala </b>, 
+                                            <br><small>Compliance Officer and Company Sec.</small></td><td class="yfnc_tabledata1" nowrap>N/A</td><td class="yfnc_tabledata1" nowrap>N/A</td></tr></table></td></tr></table><table cellpadding="2" cellspacing="0" border="0" width="100%"><tr><td height="2"><spacer type="block" width="1" height="2"/></td></tr><tr><td><small>Amounts are as of Dec 31, 2013 and compensation values are for the last fiscal year ending on that date. Pay is salary, bonuses, etc.Exercised is the value of options exercised during the fiscal year.</small></td></tr><tr><td><small>Currency in INR.</small></td></tr></table><table border="0" cellpadding="2" cellspacing="0" width="100%"></table><span id="yfs_ad_" ></span><span id="yfs_ad_" ></span><span id="yfs_ad_" ></span></td></tr></table> <div id="yfi_media_net" style="width:475px;height:200px;"></div><script id="mNCC" type="text/javascript"> 
+		medianet_width='475';
+		medianet_height= '200';
+		medianet_crid='625102783';
+		medianet_divid = 'yfi_media_net';
+	</script><script type="text/javascript">
+	ll_js.push({
+	    'file':'http://mycdn.media.net/dmedianet.js?cid=8CUJ144F7'
+	});
+	</script></div> <div class="yfi_ad_s"></div></div><div class="footer_copyright"><div class="yfi_doc"><div id="footer" style="clear:both;width:100% !important;border:none;"><hr noshade size="1"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td class="footer_legal">Copyright &amp;copy; 2009 Yahoo! All rights reserved.</td></tr><tr><td><div class="footer_legal"></div><div class="footer_disclaimer"><p>Quotes are <strong>real-time</strong> for NASDAQ, NYSE, and NYSE MKT. See also delay times for <a href="http://help.yahoo.com/l/us/yahoo/finance/quotes/fitadelay.html">other exchanges</a>. All information provided "as is" for informational purposes only, not intended for trading purposes or advice. Neither Yahoo! nor any of independent providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the Yahoo! site, you agree not to redistribute the information found therein. Real-Time continuous streaming quotes are available through our <a href="http://billing.finance.yahoo.com/realtime_quotes/signup?.src=quote&amp;.refer=quote">premium service.</a> You may turn streaming quotes on or off.</p><p>Fundamental company data provided by <a href="http://www.capitaliq.com">Capital IQ</a>. Historical chart data and daily updates provided by <a href="http://www.csidata.com">Commodity Systems, Inc. (CSI)</a>. International historical chart data, daily updates, fund summary, fund performance, dividend data and Morningstar Index data provided by <a href="http://www.morningstar.com/">Morningstar, Inc.</a></p></div></td></tr></table></div></div></div><!-- SpaceID=0 robot -->
+<script type="text/javascript">
+            ( function() {
+                var nav = document.getElementById("yfi_investing_nav");
+                if (nav) {
+                    var content = document.getElementById("rightcol");
+                    if ( content && nav.offsetHeight < content.offsetHeight) {
+                        nav.style.height = content.offsetHeight + "px";
+                    }
+                }
+             }());
+        </script><div id="spaceid" style="display:none;">95941563</div><script type="text/javascript">
+                if(typeof YAHOO == "undefined"){YAHOO={};}
+                if(typeof YAHOO.Finance == "undefined"){YAHOO.Finance={};}
+                if(typeof YAHOO.Finance.SymbolSuggestConfig == "undefined"){YAHOO.Finance.SymbolSuggestConfig=[];}
 
-        </div>
-    <div id="yfi_doc">
-    
-	<!-- SpaceID=0 robot -->
-
-        <div id="yfi_fp_bd">
-            <div id="yfi_ad_FB2">
-                           <div id="yfi_ads_4x4">             <span id="yfi_ads_4x4_1">
-                <!-- SpaceID=0 robot -->
-
-            </span>            <span id="yfi_ads_4x4_2">
-                
-            </span>            <span id="yfi_ads_4x4_3">
-                
-            </span>            <span id="yfi_ads_4x4_4">
-                
-            </span>           </div> 
-            </div>		
-            <div id="yfi_fp_left">
-                <div id="yfi_fp_left_top">
-                    <div id="yfi_sym_lookup_results"><h1>Get Quotes Results for A7Z.DE</h1><form name="symlookupform" id="symlookupform" action=""><input type="hidden" name="s" value="A7Z.DE"><input type="hidden" name="t" value="A"><input type="hidden" name="b" value="0"><fieldset><legend>Filter Results</legend><label for="m">Market</label><select name="m" id="m" class="sldd"><option value="ALL" selected> All Markets </option><option value="US" > US & Canada </option></select></fieldset></form><div id="yfi_sym_lookup_spellsuggest" style="clear:both">Did you mean: <a href="/lookup?s=a7z.de" id="urlhitterlink">a7z.de</a><div id="spelltoken" style="display: none;">deprecated</div><div id="badquery" style="display: none;">A7Z.DE</div></div><div id="yfi_sym_lookup" class="yui-navset"><ul class="yui-nav"><li class="selected"><a href="/lookup/all?s=A7Z.DE&amp;t=A&amp;m=ALL&amp;r=" title="All"><em>All<br>
-               (0)
-			</em></a></li><li><a href="/lookup/stocks?s=A7Z.DE&amp;t=S&amp;m=ALL&amp;r=" title="Stocks"><em>Stocks<br>
-               (0)
-			</em></a></li><li><a href="/lookup/funds?s=A7Z.DE&amp;t=M&amp;m=ALL&amp;r=" title="Mutual Funds"><em>Mutual Funds<br>
-               (0)
-			</em></a></li><li><a href="/lookup/etfs?s=A7Z.DE&amp;t=E&amp;m=ALL&amp;r=" title="ETFs"><em>ETFs<br>
-               (0)
-			</em></a></li><li><a href="/lookup/indices?s=A7Z.DE&amp;t=I&amp;m=ALL&amp;r=" title="Indices"><em>Indices<br>
-               (0)
-			</em></a></li><li><a href="/lookup/futures?s=A7Z.DE&amp;t=F&amp;m=ALL&amp;r=" title="Futures"><em>Futures<br>
-               (0)
-			</em></a></li><li><a href="/lookup/currency?s=A7Z.DE&amp;t=C&amp;m=ALL&amp;r=" title="Currencies"><em>Currencies<br>
-               (0)
-			</em></a></li></ul><div class="yui-content"><div id="yfi_sym_results"><div class="error"><h2>There are no All Markets results for<strong> A7Z.DE</strong></h2><div class="suggestions"><h3>Suggestions:</h3><ul><li>* Check your spelling.</li><li>* Check our suggested matches as you type in the Get Quotes box.</li><li>* Try the results in <a href="/lookup/all?s=A7Z.DE&amp;m=US&amp;t=A">US &amp; Canada</a> markets.
-                        </li></ul></div></div></div></div></div></div>
-
-                </div>		
-                <div id="yfi_fp_left_bottom">
-                    <!--legacy ysmKeyword - no data returned-->
-
-                </div>
-            </div>
-            <div id="yfi_fp_right">
-                <!-- SpaceID=0 robot -->
-
-            </div>
-        </div>
-    </div>
-        <div id="y-footer">
-            <div class="yom-mod yom-footer-links" id="footer-links"><div class="bd"><div class="yog-grid yog-24u"><div class="yog-wrap">
-<div class="yog-col yog-7u"><div class="yom-mod yom-nav-footer" id="nav-footer">
-<div class="hd"><h2>Yahoo Finance</h2></div>
-<div class="bd"><div class="content"><div class="wrap">
-<ul class="yom-list col first" style="width: 50%;">
-<li><a href="/banking-budgeting" mapleUltParams="sec=footer-yfinance">Banking & Budgeting</a></li>
-<li><a href="/calculator/index" mapleUltParams="sec=footer-yfinance">Calculators</a></li>
-<li><a href="/currency" mapleUltParams="sec=footer-yfinance">Currency</a></li>
-<li><a href="/etf" mapleUltParams="sec=footer-yfinance">ETFs</a></li>
-<li><a href="/marketupdate?u" mapleUltParams="sec=footer-yfinance">Investing</a></li>
-</ul>
-<ul class="yom-list col last" style="width: 50%;" start="6">
-<li><a href="/insurance" mapleUltParams="sec=footer-yfinance">Insurance</a></li>
-<li><a href="/actives?e=us" mapleUltParams="sec=footer-yfinance">Market Stats</a></li>
-<li><a href="http://biz.yahoo.com/promo/mbbeta.html" mapleUltParams="sec=footer-yfinance">Message Boards</a></li>
-<li><a href="http://mobile.yahoo.com" mapleUltParams="sec=footer-yfinance">Mobile</a></li>
-<li><a href="/personal-finance" mapleUltParams="sec=footer-yfinance">Personal Finance</a></li>
-</ul>
-</div></div></div>
-</div></div>
-<div class="yog-col yog-17u"><div class="yog-wrap">
-<div class="yog-col yog-9u first"><div class="yom-mod yom-linkbox yom-also-on-yahoo" id="also-on-yahoo">
-<div class="hd"><h2>Also on Yahoo!</h2></div>
-<div class="bd"><div class="content"><div class="wrap">
-<ul class="yom-list col first" style="width: 33.333333333333%;">
-<li><a href="http://autos.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Autos</a></li>
-<li><a href="http://finance.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Finance</a></li>
-<li><a href="http://www.flickr.com" mapleUltParams="sec=footer-alsoonyahoo">Flickr</a></li>
-<li><a href="http://games.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Games</a></li>
-<li><a href="http://groups.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Groups</a></li>
-<li><a href="http://health.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Health</a></li>
-</ul>
-<ul start="7" class="yom-list col" style="width: 33.333333333333%;">
-<li><a href="http://mail.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Mail</a></li>
-<li><a href="http://maps.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Maps</a></li>
-<li><a href="http://movies.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Movies</a></li>
-<li><a href="http://music.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Music</a></li>
-<li><a href="http://my.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">My Yahoo!</a></li>
-<li><a href="http://news.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">News</a></li>
-</ul>
-<ul start="13" class="yom-list col last" style="width: 33.333333333333%;">
-<li><a href="http://shopping.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Shopping</a></li>
-<li><a href="http://sports.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Sports</a></li>
-<li><a href="http://travel.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">Travel</a></li>
-<li><a href="http://tv.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo">TV</a></li>
-<li><a href="http://video.yahoo.com" mapleUltParams="sec=footer-alsoonyahoo">Video</a></li>
-</ul>
-</div></div></div>
-<div class="ft"><a href="http://everything.yahoo.com/" mapleUltParams="sec=footer-alsoonyahoo" class="more">All Y! Services&nbsp;&raquo;</a></div>
-</div></div>
-<div class="yog-col yog-8u last"><div class="yom-mod yom-linkbox yom-things-to-do" id="things-to-do">
-<div class="hd"><h2>Things To Do</h2></div>
-<div class="bd"><div class="content"><div class="wrap"><ul>
-<li><a href="http://yfinanceblog.com/" mapleUltParams="sec=footer-thingstodo">Read Our Blog</a></li>
-<li><a href="http://mobile.yahoo.com" mapleUltParams="sec=footer-thingstodo">Finance on Your Phone</a></li>
-<li><a href="http://realestate.yahoo.com/Homevalues" mapleUltParams="sec=footer-thingstodo">Check Home Values</a></li>
-<li><a href="http://autos.yahoo.com/" mapleUltParams="sec=footer-thingstodo">Find a New Car</a></li>
-<li><a href="http://hotjobs.yahoo.com/" mapleUltParams="sec=footer-thingstodo">Search Jobs Across the Web</a></li>
-</ul></div></div></div>
-</div></div>
-</div></div>
-</div></div></div></div>
-
-            <div class="y-footer"><div class="footer-wrapper"><div class="footer-wrapper-inner"><div class="worldwide yog-24u">
-<h2>Yahoo! Finance Worldwide</h2>
-<ul>
-<li><a href="http://ar.finanzas.yahoo.com/">Argentina</a></li>
-<li><a href="http://au.finance.yahoo.com/">Australia</a></li>
-<li><a href="http://br.financas.yahoo.com/">Brazil</a></li>
-<li><a href="http://ca.finance.yahoo.com/">Canada</a></li>
-<li><a href="http://fr.finance.yahoo.com/">France</a></li>
-<li><a href="http://fr-ca.finance.yahoo.com/">French Canada</a></li>
-<li><a href="http://de.finance.yahoo.com/">Germany</a></li>
-</ul>
-<ul>
-<li><a href="http://hk.finance.yahoo.com/">Hong Kong</a></li>
-<li><a href="http://in.finance.yahoo.com/">India</a></li>
-<li><a href="http://it.finance.yahoo.com/">Italy</a></li>
-<li><a href="http://finance.yahoo.co.jp/">Japan</a></li>
-<li><a href="http://mx.finanzas.yahoo.com/">Mexico</a></li>
-<li><a href="http://nz.finance.yahoo.com/">New Zealand</a></li>
-<li><a href="http://sg.finance.yahoo.com/">Singapore</a></li>
-<li><a href="http://es.finance.yahoo.com/">Spain</a></li>
-<li><a href="http://es-us.finanzas.yahoo.com/">Spanish</a></li>
-<li><a href="http://tw.stock.yahoo.com/">Taiwan</a></li>
-<li><a href="http://uk.finance.yahoo.com/">UK & Ireland</a></li>
-<li><a href="http://finance.yahoo.com">USA</a></li>
-</ul>
-</div></div></div></div>
-
-            <div class="footer_copyright">
-               <div class="yog-24u">
-                   <div class="footer_legal">
-                       <!-- SpaceID=0 robot -->
-
-                   </div>
-                   <div class="footer_legal"></div><div class="footer_disclaimer">
-<p>Quotes are <strong>real-time</strong> for NASDAQ, NYSE, and NYSE MKT. See also delay times for <a href="http://help.yahoo.com/l/us/yahoo/finance/quotes/fitadelay.html">other exchanges</a>. All information provided "as is" for informational purposes only, not intended for trading purposes or advice. Neither Yahoo! nor any of independent providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the Yahoo! site, you agree not to redistribute the information found therein. Real-Time continuous streaming quotes are available through our <a href="http://billing.finance.yahoo.com/realtime_quotes/signup?.src=quote&amp;.refer=quote">premium service.</a> You may turn streaming quotes on or off.</p>
-<p>Fundamental company data provided by <a href="http://www.capitaliq.com">Capital IQ</a>. Historical chart data and daily updates provided by <a href="http://www.csidata.com">Commodity Systems, Inc. (CSI)</a>. International historical chart data, daily updates, fund summary, fund performance, dividend data and Morningstar Index data provided by <a href="http://www.morningstar.com/">Morningstar, Inc.</a></p>
-</div>
-
-               </div>
-            </div>
-        </div>
-
-    <div id="spaceid" style="display:none;">2142000625</div><script type="text/javascript">
+                    YAHOO.Finance.SymbolSuggestConfig.push({
+                        dsServer:'http://d.yimg.com/aq/autoc',
+                        dsRegion:'US',
+                        dsLang:'en-US',
+                        dsFooter:'<div class="moreresults"><a class="[[tickdquote]]" href="http://finance.yahoo.com/lookup?s=[[link]]">Show all results for [[tickdquote]]</a></div><div class="tip"><em>Tip:</em> Use comma (,) to separate multiple quotes. <a href="http://help.yahoo.com/l/us/yahoo/finance/quotes/quotelookup.html">Learn more...</a></div>',
+                        acInputId:'pageTicker',
+                        acInputFormId:'quote2',
+                        acContainerId:'quote2Container',
+                        acModId:'profileget',
+			acInputFocus:'0'
+                    });
+				</script></body><div id="spaceid" style="display:none;">95941563</div><script type="text/javascript">
                 if(typeof YAHOO == "undefined"){YAHOO={};}
                 if(typeof YAHOO.Finance == "undefined"){YAHOO.Finance={};}
                 if(typeof YAHOO.Finance.SymbolSuggestConfig == "undefined"){YAHOO.Finance.SymbolSuggestConfig=[];}
@@ -360,41 +205,46 @@ YUI().use('node',function(Y){
                         acModId:'mediaquotessearch',
 			acInputFocus:'0'
                     });
-				</script>
-
-    
-<script type="text/javascript" src="http://l.yimg.com/bm/combo?fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_lazy_load.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_nav_topnav.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_nav_topnav_init.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_nav_portfolio.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_symbol_suggest.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_loader.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_init_symbol_suggest.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/ylc_1.9.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi.js&fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_common.js"></script>
-
-<script type="text/javascript" src="http://l.yimg.com/zz/combo?kx/yucs/uh3/uh/js/771/uh-min.js&kx/yucs/uh3/uh/js/102/gallery-jsonp-min.js&kx/yucs/uh3/uh/js/771/menu_utils_v3-min.js&kx/yucs/uh3/uh/js/822/timestamp_library-min.js&kx/yucs/uh3/uh/js/829/logo_debug-min.js&kx/yucs/uh3/uh3_top_bar/js/259/top_bar_v3-min.js&kx/yucs/uh3/search/js/457/search-min.js&kx/ucs/common/js/131/jsonp-super-cached-min.js&kx/yucs/uh3/avatar/js/25/avatar-min.js&kx/yucs/uh3/mail_link/js/70/mailcount-min.js&kx/yucs/uh3/help/js/53/help_menu_v3-min.js&kx/ucs/common/js/131/jsonp-cached-min.js&kx/yucs/uh3/breakingnews/js/5/breaking_news-min.js&kx/yucs/uh3/uh3_contextual_shortcuts/js/55/shortcuts-bootstrap.js&kx/yucs/uh3/location/js/7/uh_locdrop-min.js"></script>
-
-                                    <script>
-                                        var ll_js = new Array();
-                                    </script>
-                                
-
-
-				 <script>
-				       ll_js.push({
-					   'file': "http://l1.yimg.com/bm/lib/fi/common/p/d/static/js/2.0.298290/2.0.0/yfi_comscore.js"
-					});
-																							     </script>
-				
-
-    
-    <script type="text/javascript">
-        YAHOO.namespace('YAHOO.Finance');
-        YAHOO.Finance.submitMarketSelect = function() {
-        document.getElementById("symlookupform").submit();
-        }
-        YAHOO.util.Event.addListener(document.getElementById("m"), "change", YAHOO.Finance.submitMarketSelect);
-         if ("A7Z.DE" != "") document.getElementById("txtQuotes").value = "A7Z.DE".replace( "&amp;" , "&" ); 
-    </script>
-    
-    
-    
-    
-</body>
-</html>
-
-<!-- finance:myservice-us:0:Success -->
-<!-- xsltm7.finance.bf1.yahoo.com uncompressed/chunked Sun Nov 10 10:22:42 UTC 2013 -->
+				</script><script type="text/javascript" src="http://l1.yimg.com/bm/combo?fi/common/p/d/static/js/2.0.298290/2.0.0/mini/ylc_1.9.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_loader.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_symbol_suggest.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_init_symbol_suggest.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_nav_topnav_init.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_nav_topnav.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_nav_portfolio.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_fb2_expandables.js&amp;fi/common/p/d/static/js/2.0.298290/yui_2.8.0/build/get/2.0.0/mini/get.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfi_lazy_load.js&amp;fi/common/p/d/static/js/2.0.298290/2.0.0/mini/yfs_concat.js&amp;fi/common/p/d/static/js/2.0.298290/translations/2.0.0/mini/yfs_l10n_en-US.js"></script><span id="yfs_params_vcr" style="display:none">{"yrb_token" : "YFT_MARKET_CLOSED", "tt" : "1384079557", "s" : "astec.bo", "k" : "a00,a50,b00,b60,c10,c63,c64,c85,c86,g00,g53,h00,h53,l10,l84,l85,l86,p20,p43,p44,t10,t53,t54,v00,v53", "o" : "^dji,^ixic", "j" : "c10,l10,p20,t10", "version" : "1.0", "market" : {"NAME" : "U.S.", "ID" : "us_market", "TZ" : "EST", "TZOFFSET" : "-18000", "open" : "", "close" : "", "flags" : {}} , "market_status_yrb" : "YFT_MARKET_CLOSED" , "portfolio" : { "fd" : { "txns" : [ ]},"dd" : "","pc" : "","pcs" : ""}, "STREAMER_SERVER" : "http://streamerapi.finance.yahoo.com", "DOC_DOMAIN" : "finance.yahoo.com", "localize" : "0" , "throttleInterval" : "1000" , "arrowAsChangeSign" : "true" , "up_arrow_icon" : "http://l.yimg.com/a/i/us/fi/03rd/up_g.gif" , "down_arrow_icon" : "http://l.yimg.com/a/i/us/fi/03rd/down_r.gif" , "up_color" : "green" , "down_color" : "red" , "pass_market_id" : "0" , "mu" : "1" , "lang" : "en-US" , "region" : "US" }</span><span style="display:none" id="yfs_enable_chrome">1</span><input type="hidden" id=".yficrumb" name=".yficrumb" value=""><script type="text/javascript">
+				YAHOO.util.Event.addListener(window, "load", function(){YAHOO.Finance.Streaming.init();});
+			</script><script type="text/javascript">
+	ll_js.push({
+	    'file':'http://l.yimg.com/ss/rapid-3.9.js',
+	    'success_callback' : function(){
+	       if(window.RAPID_ULT) {
+	           var conf = {
+			        compr_type:'deflate', 
+	                tracked_mods:window.RAPID_ULT.tracked_mods, 
+			        keys:window.RAPID_ULT.page_params, 
+			        spaceid:95941563,
+			        client_only:0,
+			        webworker_file:"\/__rapid-worker-1.1.js",
+				nofollow_class:'rapid-nf'
+		        };
+	            window.ins = new YAHOO.i13n.Rapid(conf); //Making ins a global variable because it might be needed by other module js
+	       }
+	    }
+	});
+	</script><!--
+            Begin : Page level configs for rapid
+            Configuring modules for a page in one place because having a lot of inline scripts will not be good for performance
+        --><script type="text/javascript">
+            window.RAPID_ULT ={
+                tracked_mods:{
+                    'navigation':'Navigation',
+                    'searchQuotes':'Quote Bar',
+                    'marketindices' : 'Market Indices',
+                    'yfi_investing_nav' : 'Left nav',
+                    'yfi_rt_quote_summary' : 'Quote Summary Bar',
+                    'yfncsumtab' : 'Profile module',
+                    'yfi_ft' : 'Footer'
+                },
+                page_params:{
+                    'pstcat' : 'Quotes',
+                    'pt' : 'Quote Leaf Pages',
+                    'pstth' : 'Quotes Profile Page'
+                }
+            }
+        </script></html><!--c26.finance.bf1.yahoo.com-->
+<!-- xslt4.finance.bf1.yahoo.com uncompressed/chunked Sun Nov 10 10:32:37 UTC 2013 -->
+<!-- c26.finance.bf1.yahoo.com uncompressed/chunked Sun Nov 10 10:32:37 UTC 2013 -->

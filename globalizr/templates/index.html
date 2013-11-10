@@ -121,49 +121,64 @@
 <script type="text/javascript" src="{% static 'js/globe.js' %}"></script>
 <script type="text/javascript">
     function submitQuery(query) {
-        vals = query.split(" ");
-        if (vals.length != 2 && vals.length != 1){
-            return false;
-        }
         if(!Detector.webgl){
             Detector.addGetWebGLMessage();
         } else {
-            var container = document.getElementById('container');
-            var globe = new DAT.Globe(container);
+            var addr = "/api/interface/";
 
-            var i, tweens = [];
-          
+            vals = query.split(" ");
+            if (vals.length > 0) {
+                interf = vals[0].toLowerCase();
+                addr = addr + interf + "/"
+            } else {
+                return false;
+            }
+    
+            if (vals.length > 1) {
+                disc = vals[1].toLowerCase();
+                add = addr + disc + "/"
+            } else {
+                disc = null;
+            }
+
             var xhr;
-            TWEEN.start();
-          
             xhr = new XMLHttpRequest();
-            var interf = vals[0];
-            var disc;
-            if (vals.length == 2)
-                disc = vals[1];
-            
-            var addr = "/api/interface/" + interf + "/"+  disc + "/";
             xhr.open('GET', addr, true);
             xhr.onreadystatechange = function(e) {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
                         var response = JSON.parse(xhr.responseText);
                         if (response.status == 0) { // no errors
+                            var container = document.getElementById('container');
+                            var globe = new DAT.Globe(container);
+
+                            var i, tweens = [];
+                          
+                            TWEEN.start();
                             if (disc == null) {
                                 disc = response.keys[0];
                             }
                             globe.addData(response.data[disc], {format: 'magnitude', name: response.metadata[disc], animated: true});
-                        } else {
-                            return false;
+                            globe.createPoints();
+                            globe.animate();
+                            $("#toolbar-interface").text(interf[0].toUpperCase() + interf.slice(1));
+                            $("li").remove(".added");
+                            for ( var x = 0; x < response.keys.length; x++) {
+                                if (response.keys[x] == disc) {
+                                    $("#toolbar-list").append('<li class="active added"><a href="#">' + response.metadata[disc] + '</a></li>');
+                                } else {
+                                    strings = interf + ' ' + response.keys[x];
+                                    $("#toolbar-list").append('<li id="' + strings + '" class="added"><a href="#" >' + response.metadata[response.keys[x]] + '</a></li>');
+                                    $("#" + strings).on("click", function() { submitQuery(strings);});
+                                }
+                            }
+                            setTimeout(toolbarExpand, 500);
                         }
-                        globe.createPoints();
-                        globe.animate();
-                        setTimeout(toolbarExpand, 500);
-                        return true;
                     } 
                 }
             };
-            xhr.send(null);
+            xhr.send(null)
+            return true;
         }
         return false;   
     }
@@ -174,12 +189,8 @@
     </div>
     <h1 id="toolbar-interface">Heading</h1>
     <div class="sidebar-nav">
-        <ul class="nav nav-list">
+        <ul id="toolbar-list" class="nav nav-list">
             <li class="nav-header"><h2>Options</h2></li>
-            <li class="active"><a href="#">Option</a></li>
-            <li><a href="#">Preference</a></li>
-            <li><a href="#">Setting</a></li>
-            <li><a href="#">Monkey</a></li>
         </ul>
     </div>
 </div>
@@ -209,7 +220,7 @@
         $("#input-wrapper").css("opacity", 1);
         $("#landing-form").on("submit", function (e) {
             e.preventDefault();
-            if (submitQuery($("#landing-search").val()) {
+            if (submitQuery($("#landing-search").val())) {
                 hideGUI();
                 $(".globe-screen").css("display", "block");
             } else {
