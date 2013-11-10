@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     url(r'^api/interface/(\w+)/(\w+)/(\w+)/$', 'globalizr.api.views.interface'),
 
     #-- faulty API calls
-    url(r'api/.*^', 'globalizr.api.views.error'),
+    url(r'^api/.*$', 'globalizr.api.views.error'),
  
     #-- catchall, since there's no point in 404-ing
     url(r'^*$/', 'globalizr.views.home')
