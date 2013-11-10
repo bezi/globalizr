@@ -1,4 +1,4 @@
-API
+globalizr API
 ===
 /api/interface/&lt;interface&gt;/&lt;discriminant&gt;/
 ---------------------------------------------------------------------
