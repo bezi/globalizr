@@ -22,12 +22,10 @@ def getLatLong(name):
                 return db['places']['place'][0]['centroid']['latitude'], db['places']['place'][0]['centroid']['longitude']
     return "Fail"
 #simulates arctan
-def curve(x):
-    return (math.tanh((200-x)/50.0)+1)*40
+def curve(x, cap):
+    return (math.tanh((cap-x)/(cap/4.0))+1)*40
 
-def generate():
-    infile = open(os.path.join(JSON_DIRNAME, 'unis.txt'), 'r')
-    outfile = open(os.path.join(JSON_DIRNAME, 'universities.json'), 'w+')
+def getData(infile, cap):
     line = infile.readline()
     idx = 0
     data = []
@@ -37,17 +35,35 @@ def generate():
         t = getLatLong(line.rstrip())
         if (t != "Fail"):
             lat, long = t
-            data = data + [curve(idx),lat, long]
+            data = data + [curve(idx,cap),lat, long]
         line = infile.readline()
-    print data
+    return data
+def generate():
+    infiles = [open(os.path.join(JSON_DIRNAME, 'unisartsandhumanities.txt'), 'r'),
+               open(os.path.join(JSON_DIRNAME, 'unisengineering.txt'), 'r'),
+               open(os.path.join(JSON_DIRNAME, 'unisclinic.txt'), 'r'),
+               open(os.path.join(JSON_DIRNAME, 'unislife.txt'),'r'),
+               open(os.path.join(JSON_DIRNAME, 'unisscience.txt'), 'r'),
+               open(os.path.join(JSON_DIRNAME, 'unissocialsci.txt'), 'r'),
+               open(os.path.join(JSON_DIRNAME, 'unis.txt'),'r')]
+    outfile =  open(os.path.join(JSON_DIRNAME, 'universities.json'), 'w+')
+    keys = ['world', 'artshumanities','engineering','clinical',
+             'biology','sciences','history']
+    caps = [100, 100, 100, 100, 100, 100, 400]
+    data = [0,1,2,3,4,5,6]
+    idx = 0
+    for infile in infiles: 
+        data[idx] = getData(infile, caps[idx])
+        idx = idx + 1
     outfile.write('{"name": "universities",\n')
     outfile.write('"status" : 0,\n')
-    outfile.write('"keys": "points",\n')
+    outfile.write('"keys":'+ str(keys)+',\n')
     outfile.write('"data": {')
-    outfile.write('"points":'+str(data)+"\n")
+    for i in xrange(7):
+        outfile.write(keys[i]+':'+str(data[i])+',\n')
     outfile.write('},\n')
     outfile.write('"metadata":')
-    descs = '''{ "points":  "An integer based on the internationalprestige of a given university, between 0-80.",}\n'''
+    descs = '''{ "pasd":  "An integer based on the internationalprestige of a given university, between 0-80.",}\n'''
     outfile.write(descs)
     outfile.write("}\n")
     infile.close()
