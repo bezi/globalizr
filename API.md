@@ -8,8 +8,8 @@ Returns json of the form:
     "name": name, // name of interface
     "status": 0|1, // 1 if there is an error
     "keys": ["disc1", "disc2", . . . ],
-    "data": {"disc1": "pos_data": [ mag1, lat1, lon1, . . .], // format read by globe
-             "disc2": "pos_data": [ mag1, lat1, lon1, . . .],                         
+    "data": {"disc1": [ mag1, lat1, lon1, . . .], // format read by globe
+             "disc2": [ mag1, lat1, lon1, . . .],                         
     },
     "metadata": {"disc1": "description1", "disc2": "description2", . . .} // string descriptors for each discriminant
 }
