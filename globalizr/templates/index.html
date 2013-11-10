@@ -9,18 +9,66 @@
         <h1 id="landing-header">globalizr</h1>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
+                <form id="landing-form" autocomplete="off">
                 <input type="search" id="landing-search" placeholder="globalize it." onfocus="this.placeholder = ''"/>
+                </form>
             </div>
         </div>
     </div>
     <div class="row">
-        <ul class="about-list">
+        <ul id="about-list" class="about-list">
             <li><a href="/about/#what"><button class="btn my-btn">What</button></a></li>
             <li><a href="/about/#how"><button class="btn my-btn">How</button></a></li>
             <li><a href="/about/#about"><button class="btn my-btn">About</button></a></li>
         </ul>
     </div>
 </div><!-- /.container -->
+<div id="container"></div>
+    <script type="text/javascript" src="{% static 'js/Detector.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/three.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/Tween.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/globe.js' %}"></script>
+    <script type="text/javascript">
+    function hideGUI() {
+        $("#input-wrapper").css('display', 'none');
+        $("#about-list").css('display', 'none');
+    }
+
+    function submitQuery() {
+        query = $("#landing-search").val();
+        if(!Detector.webgl){
+            Detector.addGetWebGLMessage();
+        } else {
+
+          var container = document.getElementById('container');
+          var globe = new DAT.Globe(container);
+
+          console.log(globe);
+          var i, tweens = [];
+          
+          var xhr;
+          TWEEN.start();
+          
+          xhr = new XMLHttpRequest();
+          xhr.open('GET', '/api/interface/flickr/interesting/', true);
+          xhr.onreadystatechange = function(e) {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                var data = JSON.parse(xhr.responseText);
+                window.data = data;
+                if (data.status == 0) {
+                        globe.addData(data.data[data.keys[0]].pos_data.data, {format: 'magnitude', name: data.data[data.keys[0]].pos_data.name, animated: true});
+                }
+                globe.createPoints();
+                globe.animate();
+              }
+            }
+          };
+          xhr.send(null);
+        }
+        return false;
+    }
+    </script>
 <div id="legend">
     
 </div>
@@ -33,6 +81,11 @@
     $(document).ready(function() {
         $("#input-wrapper").css("opacity", 1);
         $(".about-list").css("opacity", 1);
+        $("#landing-form").on("submit", function (e) {
+            e.preventDefault();
+            hideGUI();
+            submitQuery();
+        });
     });
 </script>
 {% endblock %}
