@@ -8,13 +8,18 @@ urlpatterns = patterns('',
     # About page
     url(r'^about/$', 'globalizr.views.about'),
 
-    # World page: Debugging information.
-    url(r'^world/$', 'globalizr.views.world'),
-
     # API
     #-- query
     url(r'^api/query/(\w+)/$', 'globalizr.api.views.query'),
     
     #-- interface
-    url(r'^api/interface/(\w+)/(\w+)/$', 'globalizr.api.views.interface')
+    url(r'^api/interface/(\w+)/$', 'globalizr.api.views.interface'),
+    url(r'^api/interface/(\w+)/(\w+)/$', 'globalizr.api.views.interface'),
+    url(r'^api/interface/(\w+)/(\w+)/(\w+)/$', 'globalizr.api.views.interface'),
+
+    #-- faulty API calls
+    url(r'api/.*^', 'globalizr.api.views.error'),
+ 
+    #-- catchall, since there's no point in 404-ing
+    url(r'^*$/', 'globalizr.views.home')
 )

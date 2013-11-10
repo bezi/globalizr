@@ -5,18 +5,16 @@ from query import parse_query
 from interfaces.flickr import parse_interface_flickr
 from django.http import HttpResponse
 
-# Query for a search string, returns JSON representing 
-# globe data
-def query(request, query="random"):
-    data = parse_query(query)
-    response = json.dumps(data, sort_keys=True)
-    return HttpResponse(response, mimetype='application/json')
-
-def interface(request, interface="random", metric="random"):
-    if interface == "flickr":
-        #data = parse_interface_flickr(metric)
-        response = open(os.path.abspath(os.path.dirname(__file__))  + '/interfaces/json/flickr_interesting.json').read()
+INTERFACE_DIR = os.path.abspath(os.path.dirname(__file__)) + '/interfaces/json/'
+INTERFACES = ["flickr"];
+def interface(request, interface, metric="default", disc="default"):
+    if interface in INTERFACES:
+        response = open(INTERFACE_DIR + interface + '.json').read()
     else:
         data = { "status": 1 }
         response = json.dumps(data, sort_keys=True)
     return HttpResponse(response, mimetype='application/json')
+
+def error(request):
+    response = {"error: faulty API call"}
+    return HttpResponse(json.dumps(response), mimetype='application/json')
