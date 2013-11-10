@@ -188,8 +188,8 @@ DAT.Globe = function(container, colorFn) {
         for (i = 0; i < data.length; i += step) {
 
           size = data[i];
-          lng = data[i + 1];
-          lat = data[i + 2];
+          lat = data[i + 1];
+          lng = data[i + 2];
           color = colorFnWrapper(data,i);
           addPoint(lat, lng, size, color, this._baseGeometry);
         }

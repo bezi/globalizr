@@ -1,5 +1,5 @@
 import os.path
-from flickr import Flickr
+from flickr import *
 import datetime
 
 SELF_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -7,7 +7,7 @@ JSON_DIRNAME = os.path.join(SELF_PATH, 'json')
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 def generateJSON(year, month, metric):
-    data = Flickr.parse_interface_flickr(year, month, metric)
+    data = parse_interface_flickr(year, month, metric)
     n = ('"'+"Popular Flickr pictures for " + months[month-1]+" "+str(year)+'"')
     s = data["status"]
     pos_data_name = data["data"]["name"]
@@ -42,6 +42,7 @@ def generate():
             month = 0
             year = year + 1
         else: month = month + 1
+        f.write('}')
     f.write('}')
     f.close()
 
