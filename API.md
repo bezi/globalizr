@@ -1,6 +1,6 @@
 API
 ===
-/api/interface/&lt;interface&gt;/&lt;metric&gt;/&lt;discriminant&gt;/
+/api/interface/&lt;interface&gt;/&lt;discriminant&gt;/
 ---------------------------------------------------------------------
 Returns json of the form:
 ```
