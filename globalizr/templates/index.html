@@ -149,6 +149,7 @@ function submitQuery(query) {
                     }
                     globe.createPoints();
                     globe.animate();
+                    setTimeout(toolbarExpand, 500);
                 } 
             }
         };
@@ -157,17 +158,41 @@ function submitQuery(query) {
     return false;   
 }
 </script>
-<div id="legend">
-    
-</div>
 <div id="toolbar">
-    
+    <div id="toolbar-collapse-btn">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <h1 id="toolbar-interface">Heading</h1>
+    <div class="sidebar-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header"><h2>Options</h2></li>
+            <li class="active"><a href="#">Option</a></li>
+            <li><a href="#">Preference</a></li>
+            <li><a href="#">Setting</a></li>
+            <li><a href="#">Monkey</a></li>
+        </ul>
+    </div>
 </div>
 {% endblock %}
 {% block scripts %}
 <script>
     function hideGUI() {
         $("#input-wrapper").css('display', 'none');
+    }
+    $("#toolbar-collapse-btn").on("click", toolbarCollapse);
+
+    function toolbarExpand() {
+        $("#toolbar-collapse-btn").on("click", toolbarCollapse);
+        $("#toolbar").css('left', "0px");
+        $("#toolbar-collapse-btn").children().addClass("glyphicon-chevron-left");
+        $("#toolbar-collapse-btn").children().removeClass("glyphicon-chevron-right");
+    }
+
+    function toolbarCollapse() {
+        $("#toolbar-collapse-btn").on("click", toolbarExpand);
+        $("#toolbar").css('left', "-20%");
+        $("#toolbar-collapse-btn").children().removeClass("glyphicon-chevron-left");
+        $("#toolbar-collapse-btn").children().addClass("glyphicon-chevron-right");
     }
 
     $(document).ready(function() {

@@ -175,11 +175,65 @@ a:hover {
 }
 
 .globe-screen a h1 {
+    font-size: 56px;
     color: #fff;
 }
 
 .globe-screen a h1:hover {
     color: #0082B5;
+}
+
+#toolbar {
+    height: 60%;
+    width: 22%;
+    padding: 20px;
+    background-color: rgba(70, 70, 70, 0.35);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 20%;
+    left: -33%;
+    z-index: 1;
+    -webkit-transition: left 1s;
+    transition: left 1s;
+}
+
+#toolbar h1, h2 {
+    color: #eee;
+}
+
+#toolbar-collapse-btn {
+    color: white;
+    position: absolute;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    top: 0px;
+    right: 0px;
+}
+
+#toolbar-collapse-btn:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.sidebar-nav a {
+    font-family: "Arvo", serif;
+    font-size: 20px;
+    color: #2092C5;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:active, .nav-list > .active > a:focus {
+    background-color: rgba(0, 130, 181, 0.7);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    color: #ccc;
+    margin-right: +10px;
+}
+.nav>li>a:hover {
+    background-color: #444;
+    margin-right: +10px;
 }
 
 footer {
